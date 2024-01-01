@@ -1,11 +1,29 @@
-.intro {
-    text-align: center;
-  }
-  
-  .intro p {
-    line-height: 1.7;
-    color: #39a6b2;
-    width: 80%;
-    font-size: 20px;
-    margin: 0 auto;
-  }
+header {
+  padding: 20px 35px;
+  background-color: #0000;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+  display: inline;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url(../about/images/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffff;
+}
+
+h2 { 
+  text-align: center;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+  display: inline;
+}
