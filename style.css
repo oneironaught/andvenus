@@ -21,8 +21,6 @@
 
   /* apply styles to <nav> */
   header a {
-    text-decoration: none;
-    color: #ffffff;
     font-weight: bold;
     font-size: 18px;
     margin: 0 10px;
@@ -38,16 +36,36 @@
     float: right;
     margin: 7px 0;
   }
+
+  header nav li {
+    display: inline-block;
+    color: #ffffff;
+  }
   
   header nav ul li {
-    display: inline;
+    display: inline-block;
+  }
+    
+  nav li:hover {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  nav ul li a:hover {
+    background-color: #808080;
+    color: #ffffff;
   }
   
   header nav ul li a {
     margin: 0 30px;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 22px;
+    color: #ffffff;
   }
+
+  /* apply styles to main */
 
   body {
     color: #ffffff;
@@ -66,7 +84,7 @@
   
   footer h2 {
     display: inline;
-    color: #024e76;
+    color: #808080;
     font-size: 30px;
     margin: 0;
   }
@@ -78,7 +96,7 @@
   }
   
   footer a {
-    color: #024e76;
+    color: #808080;
   }
   
   section {
