@@ -3,16 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  body {
-    color: #ffffff;
-    font-family: Helvetica, Arial, sans-serif;
-  }
 
-  h2 {
-    text-align: center;
-  }
-  
   /* apply styles to <header> */
   header {
     padding: 20px 35px;
@@ -46,6 +37,21 @@
     font-weight: lighter;
     font-size: 22px;
   }
+
+  body {
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url(../andvenus/images/venus.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
   
   footer {
     background: #fce138;
@@ -73,13 +79,6 @@
   section {
     padding: 60px;
   }
-  
-  /*@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body {
-      background: #999;
-      width: 100%;
-    }
-  }/*
 
   /* For mobile phones: */
 [class*="col-"] {
