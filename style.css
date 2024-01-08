@@ -135,8 +135,8 @@
     color: #ffffff;
   }
 
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
- /* For mobile phones: */
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
+/* For mobile phones: */
 [class*="col-"] {
   width: 100%;
 }
