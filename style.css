@@ -17,11 +17,12 @@
     background-position: center;
     padding-top: 18%;
     background-color: #0000;
+    text-align: center;
   }
 
   header h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 26px;
     color: #ffffff;
     margin: 0;
     display: inline;
@@ -30,22 +31,22 @@
   /* apply styles to <nav> */
    
   header a {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0 10px;
     display: inline-block;
     padding: 10px;
     background-color: #0000;
-    text-align: middle;
+    text-align: center;
   }
   
   header nav {
-    float: center;
+    float: auto;
     margin: 7px 0;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
+    text-align: auto;
     font-size: 18px;
   }
   
@@ -83,6 +84,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: auto;
+    scroll-behavior: smooth;
   }
 
   h1 {
@@ -134,32 +136,103 @@
   }
 
   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
-  @media screen and (max-width: 200px) and (orientation: portrait) {}
-    .column {
-        width: 100%;
-        display: block;
-      }
-      /* Clear floats after the columns */
-      /*.row:after {
-        content: "";
-        display: table;
-        clear: both;
-      } */
-      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
-      
-  @media screen and (max-width: 400px) {
-  .column {
-      width: 100%;
-      display: block;
-    }
-  }
+ /* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
 
-  @media screen and (max-width: 600px) and (orientation: portrait) {}
-  .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-  }   
+
+/*For landscape: */
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: #0000;
+  }
+}
+
+/* For smaller screens */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+
+/* For Tablets: */
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* For desktop */
     
 @media only screen and (min-width: 768px) {
   /* For desktop: */
