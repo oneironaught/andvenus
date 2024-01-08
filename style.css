@@ -16,6 +16,7 @@
     background-size: cover;
     background-position: center;
     padding-top: 18%;
+    background-color: #0000;
   }
 
   header h1 {
@@ -70,15 +71,18 @@
     color: #ffffff;
   }
 
+  nav {
+    background-color: #0000;
+  }
+  
   /* apply styles to main */
 
   body {
-    background-image: url('images/venus.PNG');
+    background-image: url('images/blot\ out\ the\ sun.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-color: black;
+    background-attachment: auto;
   }
 
   h1 {
