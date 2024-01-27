@@ -1,19 +1,11 @@
-$(document).ready(function() {
-    if (localStorage.getItem("slide") == "small") {
-  
-      $('.flLeft').toggle('slide');
-      $('.flLeftsmall').toggle('slide');
-    }
-  
-    $('.menu-big').click(function() {
-      $(this).toggleClass('glyphicon-triangle-right glyphicon-triangle-left');
-      if (localStorage.getItem("slide") == null) {
-        localStorage.setItem("slide", "small");
-      } else {
-        localStorage.removeItem("slide");
-      }
-  
-      $('.flLeft').toggle('slide');
-      $('.flLeftsmall').toggle('slide');
-    });
-  });
+$(document).ready(it('should toggle the class "glyphicon-triangle-right" to "glyphicon-triangle-left" when the menu button is clicked', function() {
+  // Arrange
+  const menuButton = document.querySelector('.menu-big');
+  const icon = menuButton.querySelector('span');
+
+  // Act
+  menuButton.click();
+
+  // Assert
+  expect(icon.className).to.equal('glyphicon glyphicon-triangle-left');
+}););
