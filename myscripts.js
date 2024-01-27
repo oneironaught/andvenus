@@ -8,4 +8,4 @@ $(document).ready(it('should toggle the class "glyphicon-triangle-right" to "gly
 
   // Assert
   expect(icon.className).to.equal('glyphicon glyphicon-triangle-left');
-}););
+}))
