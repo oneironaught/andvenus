@@ -1,21 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-size: 100%;
-    font: inherit;
-  }  
+
  
  /* apply styles to <header> */
  .header { 
     height: 50px;
-    background-image: url(images/andvenus.gif);
+    background-image: url(images/andvenusgif.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 18%;
+    padding-top: 16%;
     background-color: #0000;
     text-align: center;
   }
@@ -31,16 +23,6 @@
     display: inline;
   }
   
-  
-  body {
-    font-family: Helvetica, Arial, sans-serif;
-    /*background-image: url();*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    scroll-behavior: auto;
-    color: #ffff;
-  }
   
   h2 { 
     text-align: left;
