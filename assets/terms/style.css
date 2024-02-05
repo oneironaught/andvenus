@@ -12,15 +12,6 @@
 
   /* apply styles to <nav> */
    
-  header a {
-    font-size: 15px;
-    margin: 0 10px;
-    display: inline-block;
-    padding: 10px;
-    background-color: #0000;
-    text-align: center;
-  }
-  
   header nav {
     float: auto;
     margin: 7px 0;
@@ -30,8 +21,13 @@
     padding-bottom: 20px;
     text-align: auto;
     font-size: 18px;
+    font-weight: bold;
   }
   
+  nav {
+    background-color: #0000;
+  }
+
   header nav ul li {
     display: inline-block;
   }
@@ -41,21 +37,21 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 22px;
+    border-color: #ffffff;
+    border-style: solid;
   }
 
   nav ul li a:hover {
     background-color: #808080;
     color: #ffffff;
+    border-radius: 5px;
   }
   
   header nav ul li a {
     margin: 0 30px;
     font-size: 22px;
     color: #ffffff;
-  }
-
-  nav {
-    background-color: #0000;
+    border-color: #ffffff;
   }
 
   /* apply styles to main */
@@ -66,7 +62,7 @@
     color: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
     margin: 0;
     display: inline;
   }
@@ -78,9 +74,9 @@
     color: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
-    display: inline;
+    display: inline-block; 
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
