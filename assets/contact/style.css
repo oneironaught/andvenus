@@ -67,8 +67,18 @@
     display: inline;
   }
   
-  
   h2 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inline-flexbox; 
+  }
+  
+  h3 { 
     text-align: justify;
     text-decoration: none;
     color: #ffffff;
@@ -76,11 +86,7 @@
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: inline-block; 
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: inline; 
   }
   
   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
