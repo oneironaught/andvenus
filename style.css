@@ -39,19 +39,12 @@
     text-align: center;
   }
   
-  header nav {
-    float: auto;
-    margin: 7px 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: auto;
-    font-size: 18px;
-  }
-  
   header nav ul li {
     display: inline-block;
+    margin: 0 30px;
+    font-size: 22px;
+    position: inherit;
+    text-align: center;
   }
     
   nav li:hover {

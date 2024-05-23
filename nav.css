@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 100%;
+  font: inherit;
+} 
+
 /* apply styles to <header> */
 .header { 
   height: 50px;
@@ -5,31 +15,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 16%;
+  padding-top: 18%;
   background-color: #0000;
   text-align: center;
 }
 
-/* apply styles to <nav> */
- 
-header nav {
-  float: auto;
-  margin: 7px 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: auto;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav {
+header a {
+  font-size: 15px;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 10px;
   background-color: #0000;
+  text-align: center;
 }
 
 header nav ul li {
   display: inline-block;
+  margin: 0 30px;
+  font-size: 22px;
+  position: inherit;
+  text-align: center;
 }
   
 nav li:hover {
@@ -37,21 +42,21 @@ nav li:hover {
   color: #ffffff;
   font-weight: bold;
   font-size: 22px;
-  border-color: #ffffff;
-  border-style: solid;
 }
 
 nav ul li a:hover {
   background-color: #808080;
   color: #ffffff;
-  border-radius: 5px;
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-size: 22px;
   color: #ffffff;
-  border-color: #ffffff;
+}
+
+nav {
+  background-color: #0000;
 }
 
 /* apply styles to main */
