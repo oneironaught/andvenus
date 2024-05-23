@@ -20,14 +20,6 @@
     text-align: center;
   }
 
-  header h1 {
-    font-weight: bold;
-    font-size: 26px;
-    color: #ffffff;
-    margin: 0;
-    display: inline;
-  }
-
   /* apply styles to <nav> */
    
   header a {
@@ -69,7 +61,7 @@
     background-color: #0000;
   }
   
-  /* apply styles to main */
+  /* apply styles to main body */
 
   body {
     background-image: url('images/blot\ out\ the\ sun.png');
@@ -82,7 +74,13 @@
 
   h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+    display: inline;
   }
   
   /* apply styles to footer */

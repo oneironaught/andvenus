@@ -20,6 +20,8 @@
   text-align: center;
 }
 
+/* apply styles to nav bar */
+
 header a {
   font-size: 15px;
   margin: 0 10px;
@@ -59,10 +61,19 @@ nav {
   background-color: #0000;
 }
 
-/* apply styles to main */
+/* apply styles to main body */
+
+body {
+  background-image: url('images/blot\ out\ the\ sun.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: auto;
+  scroll-behavior: smooth;
+}
 
 h1 {
-  text-align: justify;
+  text-align: center;
   text-decoration: none;
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
@@ -74,7 +85,7 @@ h1 {
 
 
 h2 { 
-  text-align: justify;
+  text-align: center;
   text-decoration: none;
   color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
@@ -86,6 +97,49 @@ h2 {
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+ /* apply styles to footer */
+
+ footer.footer {
+  padding: 0px 15px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  background: #1c1c1c;
+  padding: 10px 15px !important;
+}
+
+footer.footer li:hover {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer.footer ul li a:hover {
+  background-color: #ffebdc;
+  color: #808080;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffebdc;
+  font-size: 18px;
+  background-color: #808080;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:active {
+  color: #ffffff;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
