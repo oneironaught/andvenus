@@ -7,124 +7,141 @@
   font-size: 100%;
   font: inherit;
 } 
- 
- /* apply styles to <header> */
-  .header { 
-    height: 50px;
-    background-image: url(images/andvenusgif.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 18%;
-    background-color: #0000;
-    text-align: center;
-  }
 
-  /* apply styles to <nav> */
-   
-  header a {
-    font-size: 15px;
-    margin: 0 10px;
-    display: inline-block;
-    padding: 10px;
-    background-color: #0000;
-    text-align: center;
-  }
+/* apply styles to <header> */
+.header { 
+  height: 50px;
+  background-image: url(images/andvenusgif.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 18%;
+  background-color: #0000;
+  text-align: center;
+}
+
+/* apply styles to nav bar */
+
+header a {
+  font-size: 15px;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 10px;
+  background-color: #0000;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 30px;
+  font-size: 22px;
+  position: inherit;
+  text-align: center;
+}
   
-  header nav ul li {
-    display: inline-block;
-    margin: 0 30px;
-    font-size: 22px;
-    position: inherit;
-    text-align: center;
-  }
-    
-  nav li:hover {
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 22px;
-  }
+nav li:hover {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+}
 
-  nav ul li a:hover {
-    background-color: #808080;
-    color: #ffffff;
-  }
-  
-  header nav ul li a {
-    margin: 0 30px;
-    font-size: 22px;
-    color: #ffffff;
-  }
+nav ul li a:hover {
+  background-color: #808080;
+  color: #ffffff;
+}
 
-  nav {
-    background-color: #0000;
-  }
-  
-  /* apply styles to main body */
+header nav ul li a {
+  margin: 0 30px;
+  font-size: 22px;
+  color: #ffffff;
+}
 
-  body {
-    background-image: url('images/blot\ out\ the\ sun.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: auto;
-    scroll-behavior: smooth;
-  }
+nav {
+  background-color: #0000;
+}
 
-  h1 {
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin: 0;
-    display: inline;
-  }
-  
-  /* apply styles to footer */
+/* apply styles to main body */
 
-  footer.footer {
-    padding: 0px 15px;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    background: #1c1c1c;
-    padding: 10px 15px !important;
-  }
-  
-  footer.footer li:hover {
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: bold;
-  }
+body {
+  background-image: url('images/blot\ out\ the\ sun.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: auto;
+  scroll-behavior: smooth;
+}
 
-  footer.footer ul li a:hover {
-    background-color: #ffebdc;
-    color: #808080;
-  }
+h1 {
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  display: inline;
+}
 
-  a:hover {
-    text-decoration: none;
-    color: #ffebdc;
-    font-size: 18px;
-    background-color: #808080;
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-  }
 
-  a {
-    text-decoration: none;
-    color: #ffffff;
-  }
+h2 { 
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  display: inline-block; 
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  a:active {
-    color: #ffffff;
-  }
+ /* apply styles to footer */
+
+ footer.footer {
+  padding: 0px 15px;
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  background: #1c1c1c;
+  padding: 10px 15px !important;
+}
+
+footer.footer li:hover {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer.footer ul li a:hover {
+  background-color: #ffebdc;
+  color: #808080;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffebdc;
+  font-size: 18px;
+  background-color: #808080;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:active {
+  color: #ffffff;
+}
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
 /* For mobile phones: */
@@ -319,5 +336,4 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-} 
-
+}
