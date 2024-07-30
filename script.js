@@ -11,3 +11,17 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function(){
+    $('#musicCarousel').carousel({
+        interval: 1000 // You can change this value to adjust the carousel's auto-slide interval
+    });
+
+    // Ensure the carousel controls work
+    $(".left.carousel-control").click(function(){
+        $("#musicCarousel").carousel('prev');
+    });
+    $(".right.carousel-control").click(function(){
+        $("#musicCarousel").carousel('next');
+    });
+});
