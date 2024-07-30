@@ -1,339 +1,142 @@
-* {
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  font-size: 100%;
-  font: inherit;
-} 
-
-/* apply styles to <header> */
-.header { 
-  height: 50px;
-  background-image: url(images/andvenusgif.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 18%;
-  background-color: #0000;
-  text-align: center;
 }
 
-/* apply styles to nav bar */
-
-header a {
-  font-size: 15px;
-  margin: 0 10px;
-  display: inline-block;
-  padding: 10px;
-  background-color: #0000;
-  text-align: center;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin: 0 30px;
-  font-size: 22px;
-  position: inherit;
-  text-align: center;
-}
-  
-nav li:hover {
-  cursor: pointer;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-nav ul li a:hover {
-  background-color: #808080;
-  color: #ffffff;
-}
-
-header nav ul li a {
-  margin: 0 30px;
-  font-size: 22px;
-  color: #ffffff;
-}
-
-nav {
-  background-color: #0000;
-}
-
-/* apply styles to main body */
-
-body {
-  background-image: url('images/blot\ out\ the\ sun.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: auto;
-  scroll-behavior: smooth;
-}
-
-h1 {
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin: 0;
-  display: inline;
-}
-
-
-h2 { 
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  margin: 0;
-  display: inline-block; 
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
- /* apply styles to footer */
-
- footer.footer {
-  padding: 0px 15px;
-  margin: auto;
+header {
+  position: relative;
+  height: 300px;
   width: 100%;
-  bottom: 0;
-  position: fixed;
+  overflow: visible;
+}
+
+.banner {
+  position: static;
+  top: 0;
   left: 0;
-  background: #1c1c1c;
-  padding: 10px 15px !important;
-}
-
-footer.footer li:hover {
-  cursor: pointer;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-footer.footer ul li a:hover {
-  background-color: #ffebdc;
-  color: #808080;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #ffebdc;
-  font-size: 18px;
-  background-color: #808080;
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-a:active {
-  color: #ffffff;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other (on small screens) */
-/* For mobile phones: */
-[class*="col-"] {
   width: 100%;
+  height: 100%;
+  background: url('assets/andvenus.png') no-repeat center center/cover;
 }
 
-
-/*For landscape: */
-
-@media only screen and (orientation: landscape) {
-  body {
-    background-color: #0000;
-  }
+header .container {
+  position: relative;
+  z-index: 1;
 }
 
-/* For smaller screens */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .example {background: red;}
+.nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  text-align: center;
+  padding: 1px 0;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {background: green;}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .example {background: blue;}
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {background: orange;}
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .example {background: pink;}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
 }
 
-/* If the screen size is 600px wide or less, hide the element */
-@media only screen and (max-width: 600px) {
-  div.example {
-    display: none;
-  }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
-/* If the screen size is 601px or more, set the font-size of <div> to 80px */
-@media only screen and (min-width: 601px) {
-  div.example {
-    font-size: 80px;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 15;
+  top: 100%;
+  left: 0;
 }
 
-/* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (max-width: 600px) {
-  div.example {
-    font-size: 30px;
-  }
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-/* For Tablets: */
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
+.dropdown-content a:hover {
+  background-color: #555;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-/* For desktop */
-    
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+section {
+  padding: 50px 0;
+  text-align: center;
 }
 
-@media only screen and (min-width: 1024px) {
-  /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
 }
 
-@media only screen and (min-width: 1280px) {
-  /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+footer .social-icons {
+  margin: 10px 0;
 }
 
-@media only screen and (min-width: 1440px) {
-  /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+footer .fa-brands {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@media only screen and (min-width: 1600px) {
-  /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+footer .fa-brands:hover {
+  color: #444;
 }
 
-@media only screen and (min-width: 1920px) {
-  /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+#about {
+  background-color: #111;
 }
+
+#tour {
+  background-color: #222;
+}
+
+#merch {
+  background-color: #333;
+}
+
+#contact {
+  background-color: #444;
+}
+
+.form-group label {
+  color: #fff;
+}
+
+.form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.form-control::placeholder {
+  color: #bbb;
+}
+

@@ -4,84 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>And Venus</title>
-	<!-- Linking CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- Linking javascript -->
-	<script src="myscripts.js"></script>
-	<!--Favicon-->
-	<link rel="shortcut icon" href="https://f4.bcbits.com/img/a1418076414_3.jpg">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Linking CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Linking Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/986e342f6d.js" crossorigin="anonymous"></script>
+    <!-- Linking JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <script src="script.js"></script>
 </head>
-<header>
-<!--Header and Nav-->
-	<header class="header">
-		<div class="nav">
-				</div>
-					</div>
-				<nav>
-				  <!-- Unordered list element -->
-				  <ul>
-					<!-- List item element-->
-					<li>
-					  <!-- Anchor element -->
-					  <a href="about.html">About</a>
-					</li>
-					<li>
-					  <a href="tour.html">Tour</a>
-					</li>
-					<li>
-					  <a href="merch.html">Merch</a>
-					</li>
-					<li>
-					  <a href="contact.html">Contact</a>
-					</li>
-				</nav>
-   <!-- "About" section -->
-   <section id="about" class="about"><br>
-    <br><h1 class="section-title secondary-border">This site is currently under construction!</h1><br>
-    <br>
-    <br>
-    <br>	
-</header>				
 <body>
-	<body style="background-color:black;">
-	<div class="container">
-	<br>	
-	<br>	
-	<br>	
-	<h2></h2>
-	<br>
-	<br>
-	<br>
-	</div>
+<header>
+<!--Banner -->        
+        <div class="banner"></div>
+<!-- Navigation Bar-->
+        <div class="nav">
+        <nav>
+            <ul class="nav nav-pills justify-content-center">
+                <li role="presentation"><a href="#about">About</a></li>
+                <li role="presentation"><a href="#tour">Tour</a></li>
+                <li role="presentation" class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Merch</a>
+                    <div class="dropdown-content">
+                        <a href="#tshirts">T-Shirts</a>
+                        <a href="#posters">Posters</a>
+                        <a href="#vinyl">Vinyl</a>
+                    </div>
+                </li>
+                <li role="presentation"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- About Section-->
+    <section id="about">
+        <div class="container">
+				<h2>About</h2>
+                And Venus is an up-and-coming band hailing from the vibrant music scene of Weslaco, Texas.<br>
+                With influences ranging from classic rock legends like Led Zeppelin and Pink Floyd to modern indie icons such as 
+                <br>
+                The Mars Volta and Incubus, And Venus has crafted a sound that is both nostalgic and fresh.<br> 
+                Their music is characterized by catchy guitar riffs, memorable lyrics, and a driving rhythm section<br> 
+                that never fails to get the crowd moving.<br>
+                <br>
+                Since their formation in 2007, And Venus has been steadily building a dedicated fanbase through their electrifying <br> 
+                live performances and engaging online presence. Their songs, which often explore themes of <br>
+                love, loss, and the psychological complexities of human relationships, <br> 
+                resonate deeply with their listeners.<br>
+				<br>
+				Current Members:<br>
+                Bassist Adolfo Perez<br>
+                Drummer Fernando Cruz<br> 
+                Lead guitarist Nathaniel Garcia<br>
+				Lead vocalist and guitarist Robert Ruelas <br> 
+                <br>
+        </div>
+    </section>
+<!--Tour Section-->
+    <section id="tour">
+        <div class="container">
+            <h2>Tour- Past Dates</h2>
+            <ul>
+                <ul><strong>McAllen, TX @ The Flying Walrus</strong> - November 21, 2015 - <a href="#">Sold Out</a></ul>
+                <ul><strong>Austin, TX @ Beerland</strong> - May 27, 2010 - <a href="#">Tickets</a></ul>
+                <ul><strong>Austin, TX @ Plush</strong> - May 5, 2010 - <a href="#">Tickets</a></ul>
+            </ul>
+        </div>
+    </section>
+<!-- Merch Section-->
+    <section id="merch">
+        <div class="container">
+            <h2>Merch</h2>
+            <p>Check back for our latest merchandise <a href="#">here</a>.</p>
+        </div>
+    </section>
+<!-- Contact Section-->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            Booking: <br>
+            andvenus@gmail.com
+        </div>
+    </section>
+<!-- Footer -->
+    <footer>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+        <a href="#" class="fa-brands fa-facebook" style="color: rgb(39, 39, 244)" target="_blank"  rel="noopener noreferrer" aria-label="Facebook Logo"></a>
+        <a href="#" class="fa-brands fa-instagram"style="color: tomato" target="_blank"  rel="noopener noreferrer" aria-label="Instagram Logo"></a>
+        <a href="#" class="fa-brands fa-twitter" style="color: lightblue" target="_blank"  rel="noopener noreferrer" aria-label="Twitter Logo"></a>
+        <a href="#" class="fa-brands fa-youtube" style="color: red" target="_blank"  rel="noopener noreferrer" aria-label="YouTube Logo"></a>
+        <a href="#" class="fa-brands fa-tiktok"style="color: black" target="_blank"  rel="noopener noreferrer" aria-label="TikTok Logo"></a>
+        </div>
+        <p>&copy; And Venus 2024</p>
+    </footer>
 </body>
-
-<!-- Footer Class-->
-<footer class="footer">
-	<span class="icon-black_arrow expend-btn"></span>
-	<div style="text-align: center;">
-	<a href="https://www.facebook.com/andvenus">
-	<img src="https://app-assets.topfan.com/uploads/ckeditor/pictures/8151/content_5d88a460-d250-013b-b903-0a58a9feac02.png" style="width: 25px; height: 25px;">
-	</a>
-	&nbsp;&nbsp;
-	<span class="icon-black_arrow expend-btn"></span>
-	<a href="https://twitter.com/andvenus">
-	<img src="https://app-assets.topfan.com/uploads/ckeditor/pictures/8153/content_5da20e40-d250-013b-7c6b-0a58a9feac02.png" style="width: 25px; height: 25px;">
-	</a>
-	&nbsp;&nbsp;
-	<span class="icon-black_arrow expend-btn"></span>
-	<a href="https://www.instagram.com/andvenus/">
-	<img src="https://app-assets.topfan.com/uploads/ckeditor/pictures/8152/content_5d8e5400-d250-013b-c5ad-0a58a9feac02.png" style="width: 25px; height: 25px;">
-	</a>
-	&nbsp;&nbsp;
-		</div>
-	<div style="text-align: center;">
-	<a href="terms.html"><span style="color:#999999;"> |&nbsp; </span>Terms of Use |&nbsp;</span>
-	</a>
-	<a href="privacy.html"><span style="color:#999999;"> |&nbsp; </span>Privacy Policy<span style="color:#999999;"> |&nbsp; </span>
-	</a>
-	</div>
-	<div style="text-align: center;"><span style="color:#999999;">© 2024 And Venus</span></div>
-
-</footer>
 </html>
-
