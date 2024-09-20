@@ -33,13 +33,33 @@ header .container {
 /* This styles the nav bar */
 .nav {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     bottom: 0;
     width: 100%;
-    height: inherit;
-    background-color: rgba(0, 0, 0, 0.7);
+    height: auto;
+    background-color: rgba(58, 57, 57, 0.7);
     z-index: 10;
     text-align: left;
-    padding: 10px 0;
+    padding: 3px 0;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+    transform: scale(1.2); /* Enlarge the link */
+    background-color: #555; /* Optional: Change background color on hover */
 }
 
 nav ul {
@@ -126,18 +146,21 @@ section {
 
 /* Music icons */
 
+
+
 .music .fa-brands {
     display: relative;
     margin: 0 15px;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .music .fa-brands:hover {
-    background-color: #646060;
     margin: 0 15px;
-    transition: color 0.3s ease;    
+    transition: color 0.3s ease;
+    transform: scale(1.2);
+    font-size: 1.5em;    
     cursor: pointer;
 }
 
