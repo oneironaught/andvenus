@@ -90,3 +90,51 @@ function adjustScrollSpeed() {
       slider.style.animationDuration = '20s';
     }
   }
+
+// Event details for the .ics file (for iPhone users)
+const icsEvent = {
+    title: "Live Performance - And Venus",
+    description: "Live show with Landlocked Pirates @ Double Trouble, Brownsville, TX",
+    location: "Double Trouble, Brownsville, TX",
+    start: "20241026T200000",  // Event start date: YYYYMMDDTHHMMSS format (October 26, 2024, 8 PM)
+    end: "20241026T230000",    // Event end date: YYYYMMDDTHHMMSS format (October 26, 2024, 11 PM)
+  };
+
+  // Google Calendar fallback link
+  const googleCalendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(icsEvent.title)}&details=${encodeURIComponent(icsEvent.description)}&location=${encodeURIComponent(icsEvent.location)}&dates=${icsEvent.start}Z/${icsEvent.end}Z`;
+
+  // Function to detect iPhone/iPad/iOS
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  }
+
+  // Function to generate the .ics link for iPhone users
+  function generateICSLink() {
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:${icsEvent.title}
+DESCRIPTION:${icsEvent.description}
+LOCATION:${icsEvent.location}
+DTSTART:${icsEvent.start}
+DTEND:${icsEvent.end}
+END:VEVENT
+END:VCALENDAR`;
+
+    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const url = URL.createObjectURL(blob);
+    return url;
+  }
+
+  // Set the link based on the device
+  const calendarLink = document.getElementById('calendar-link');
+  
+  if (isIOS()) {
+    // Prioritize iPhone users by setting the link to download the .ics file using webcal protocol
+    calendarLink.href = generateICSLink();
+    calendarLink.download = "event.ics";
+  } else {
+    // Fallback to Google Calendar for non-iPhone users
+    calendarLink.href = googleCalendarLink;
+    calendarLink.target = "_blank";  // Open Google Calendar in a new tab
+  }
