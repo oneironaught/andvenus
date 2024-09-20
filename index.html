@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>And Venus</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1hrdEFy2szKq3u+uO6oB57bgos5SbNEa2Z2lD9zIvAOnpK3Uh0E6hzp6" crossorigin="anonymous">
+    <!-- Bootstrap 5 JS (Bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>    
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Linking Google Fonts -->
@@ -14,14 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/986e342f6d.js" crossorigin="anonymous"></script>
     <!-- Linking JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 <header>
 <!--Banner -->        
-        <div class="banner"></div>
+<div class="banner"></div>
 <!-- Navigation Bar-->
         <div class="nav">
         <nav>
@@ -41,40 +41,29 @@
         </nav>
     </div>
 </header>
+
+<!--Music Carousel-->
 <section id="player">
 	<div class="container text-center">
-		<h2>Incidents available on all streaming services!</h2>
+		<h2>Listen to Our Music</h2>
 		<div id="musicCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ul class="carousel-indicators">
-				<ul data-target="#musicCarousel" data-slide-to="0" class="active"></ul>
-				<ul data-target="#musicCarousel" data-slide-to="1"></ul>
-				<ul data-target="#musicCarousel" data-slide-to="2"></ul>
-			</ul>
-		        <!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<iframe src="https://open.spotify.com/embed/artist/4CPEqoLO6sSiU3TS6Gygc0?utm_source=generator&theme=0" width="500" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-					</div>
-					<div class="item">
-						<iframe src="https://embed.music.apple.com/us/artist/and-venus/1335594997" width="500" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-					</div>
-					<div class="item">
-						<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293" width="500" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-					</div>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<iframe allow="autoplay" src="https://open.spotify.com/embed/artist/4CPEqoLO6sSiU3TS6Gygc0?utm_source=generator&theme=0" width="500" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 				</div>
-				<!-- Controls -->
-				<a class="left carousel-control" href="#musicCarousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#musicCarousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-				</div>
-			</div>
-	</section>
+        <h2>Available now on all streaming platforms</h2>
+        <div class="music">
+           <h2><a href="#" class="fa-brands fa-apple fa-bounce" style="color: white" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+            <a href="#" class="fa-brands fa-spotify fa-bounce" style="color: #16cb34" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+            <a href="#" class="fa-brands fa-youtube fa-bounce" style="color: #fb5209" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+            <a href="#" class="fa-brands fa-bandcamp fa-bounce" style="color: #6987ba" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+            <a href="#" class="fa-brands fa-amazon fa-bounce" style="color: #ffba44" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+            <a href="#" class="fa-brands fa-deezer fa-bounce" style="color: #8f69ba" target="_blank"  rel="noopener noreferrer" aria-label="Apple Logo"></a>
+
+           </h2>            
+</div>
+</section>
 <!-- About Section-->
     <section id="about">
         <div class="container">

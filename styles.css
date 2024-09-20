@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #000;
     color: #fff;
@@ -13,6 +15,7 @@ header {
     overflow: visible;
 }
 
+/* This styles the banner */
 .banner {
     position: absolute;
     top: 0;
@@ -27,14 +30,16 @@ header .container {
     z-index: 1;
 }
 
+/* This styles the nav bar */
 .nav {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: inherit;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 10;
-    text-align: center;
-    padding: 1px 0;
+    text-align: left;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -58,6 +63,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* This styles the dropdown menu */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -84,11 +90,58 @@ nav ul li a {
     display: block;
 }
 
+/* Ensure the carousel iframe is responsive */
+.carousel-item iframe {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Set a max-width for better control */
+    max-height: 550px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Ensure the carousel itself is centered */
+.carousel {
+    width: 100%;
+    max-width: 600px; /* Ensure the carousel itself has a max width */
+    margin: 0 auto;
+}
+
+/* Keep carousel controls at 5% width */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+/* Adjust button sizes for better appearance */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Main section */
 section {
     padding: 50px 0;
     text-align: center;
 }
 
+/* Music icons */
+
+.music .fa-brands {
+    display: relative;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.music .fa-brands:hover {
+    background-color: #646060;
+    margin: 0 15px;
+    transition: color 0.3s ease;    
+    cursor: pointer;
+}
+
+/* This styles the footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -140,3 +193,10 @@ footer .fa-brands:hover {
     color: #bbb;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item iframe {
+        max-width: 100%; /* Full width on smaller screens */
+        max-height: 300px; /* Adjust height for smaller screens */
+    }
+}

@@ -1,17 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Setup smooth scrolling for internal links
+    setupSmoothScrolling();
+    // Setup toggling for service descriptions
+    toggleServiceDescriptions();
 });
 
-$(document).ready(function() {
-    $('nav ul li a').smoothScroll();
+function setupSmoothScrolling() {
+    document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            // Proceed only if it's an internal link
+            if (targetId.startsWith('#')) {
+                e.preventDefault();  // Prevent default link behavior
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Scroll smoothly to the target element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,  // Adjust for navbar height
+                        behavior: "smooth"
+                    });
+                } else {
+                    console.error('No element found for ID:', targetId);
+                }
+            }
+        });
+    });
+}
 
-    $('.dropbtn').on('click', function() {
-        $(this).next('.dropdown-content').toggle();
+function toggleServiceDescriptions() {
+    document.querySelectorAll('.service-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const serviceId = this.getAttribute('data-service');
+            document.querySelectorAll('.service-description').forEach(description => {
+                if (description.id === serviceId) {
+                    // Toggle visibility of the corresponding service description
+                    description.style.display = description.style.display === 'block' ? 'none' : 'block';
+                } else {
+                    // Hide all other descriptions
+                    description.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+$(document).ready(function(){
+    $('#musicCarousel').carousel({
+        interval: 2000 // You can change this value to adjust the carousel's auto-slide interval
     });
 
-    $(document).on('click', function(event) {
-        if (!$(event.target).closest('.dropdown').length) {
-            $('.dropdown-content').hide();
-        }
+    // Ensure the carousel controls work
+    $(".left.carousel-control").click(function(){
+        $("#musicCarousel").carousel('prev');
+    });
+    $(".right.carousel-control").click(function(){
+        $("#musicCarousel").carousel('next');
     });
 });
 
