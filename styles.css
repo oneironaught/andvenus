@@ -216,10 +216,4 @@ footer .fa-brands:hover {
     color: #bbb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .carousel-item iframe {
-        max-width: 100%; /* Full width on smaller screens */
-        max-height: 300px; /* Adjust height for smaller screens */
-    }
-}
+
