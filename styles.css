@@ -216,4 +216,90 @@ footer .fa-brands:hover {
     color: #bbb;
 }
 
+/* Reset margin and padding for banner and navbar */
+.banner, .nav {
+    margin: 0;
+    padding: 0;
+}
 
+/* Ensure the banner and nav are touching */
+.banner {
+    display: block;
+    height: 100%; /* Ensure the banner stretches fully */
+    margin-bottom: 0; /* Remove margin below the banner */
+}
+
+.nav {
+    margin-top: 0; /* Remove any margin above the nav */
+}
+
+/* Ensure header has no extra margin/padding */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles for the nav-pills to remain horizontal */
+.nav-pills {
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+  
+  .nav-pills .nav-item {
+    margin: 0 10px; /* Add horizontal space between nav items */
+  }
+  
+  /* General Media Query for Mobile (≤ 576px) */
+@media (max-width: 576px) {
+    /* Adjust the Navigation */
+    .nav {
+        flex-direction: row; /* Stack the navigation items vertically */
+        padding: 0; /* Remove excess padding */
+    }
+
+    .nav a {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Reduce font size slightly */
+    }
+
+    .nav-pills {
+        justify-content: space-around; /* Space out items horizontally if screen allows */
+        flex-wrap: wrap; /* Allow wrapping if screen is too narrow */
+    }
+
+    .nav-pills .nav-item {
+        margin: 5px 0; /* Adjust spacing between items */
+    }
+
+    /* Adjust the Music Carousel */
+    #musicCarousel iframe {
+        width: 100%; /* Ensure the iframe scales to full width */
+        height: auto; /* Adjust the height to maintain aspect ratio */
+    }
+
+    /* Adjust banner for smaller screens */
+    .banner {
+        height: 200px; /* Reduce banner height for smaller screens */
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 20px 0; /* Reduce padding for smaller screens */
+    }
+
+    /* Adjust font sizes for headings and text */
+    h2 {
+        font-size: 22px; /* Reduce heading size */
+    }
+
+    p {
+        font-size: 14px; /* Reduce paragraph text size */
+    }
+
+    /* Adjust music icons */
+    .music .fa-brands {
+        font-size: 20px; /* Reduce icon size for smaller screens */
+        margin: 0 10px; /* Reduce margin between icons */
+    }
+}
