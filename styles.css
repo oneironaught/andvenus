@@ -1,4 +1,22 @@
+/* Inactive link (not visited) */
+a:link {
+    color: #007bff;
+}
 
+/* Visited link */
+a:visited {
+    color: rgb(240, 9, 240);
+}
+
+/* Active link (when clicked) */
+a:active {
+    color: red;
+}
+
+/* Hover link (when hovered over) */
+a:hover {
+    color: rgb(79, 109, 231);
+}
 
 body {
     background-color: #000;
@@ -146,8 +164,6 @@ section {
 
 /* Music icons */
 
-
-
 .music .fa-brands {
     display: relative;
     margin: 0 15px;
@@ -259,7 +275,7 @@ header {
     }
 
     .nav a {
-        padding: 10px 0; /* Adjust padding for smaller screens */
+        padding: 42px 0; /* Adjust padding for smaller screens */
         font-size: 14px; /* Reduce font size slightly */
     }
 
