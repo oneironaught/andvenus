@@ -49,6 +49,29 @@ header .container {
 }
 
 /* This styles the nav bar */
+.banner {
+    display: block;
+    height: 100%; /* Ensure the banner stretches fully */
+    margin-bottom: 0; /* Remove margin below the banner */
+}
+
+/* Ensure header has no extra margin/padding */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styles for the nav-pills to remain horizontal */
+.nav-pills {
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+  
+  .nav-pills .nav-item {
+    margin: 0 10px; /* Add horizontal space between nav items */
+  }
+
 .nav {
     position: absolute;
     display: flex;
@@ -61,6 +84,7 @@ header .container {
     z-index: 10;
     text-align: left;
     padding: 3px 0;
+    margin-top: 0; /* Remove any margin above the nav */
 }
 
 .nav a {
@@ -127,6 +151,23 @@ nav ul li a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Scrolling text */
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    animation: scroll 10s linear infinite;
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start offscreen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to offscreen left */
+    }
+  }
 
 /* Ensure the carousel iframe is responsive */
 .carousel-item iframe {
@@ -238,35 +279,8 @@ footer .fa-brands:hover {
     padding: 0;
 }
 
-/* Ensure the banner and nav are touching */
-.banner {
-    display: block;
-    height: 100%; /* Ensure the banner stretches fully */
-    margin-bottom: 0; /* Remove margin below the banner */
-}
-
-.nav {
-    margin-top: 0; /* Remove any margin above the nav */
-}
-
-/* Ensure header has no extra margin/padding */
-header {
-    margin: 0;
-    padding: 0;
-}
-
-/* General styles for the nav-pills to remain horizontal */
-.nav-pills {
-    display: flex;
-    justify-content: left;
-    flex-wrap: nowrap; /* Prevent wrapping */
-  }
   
-  .nav-pills .nav-item {
-    margin: 0 10px; /* Add horizontal space between nav items */
-  }
-  
-  /* General Media Query for Mobile (≤ 576px) */
+/* General Media Query for Mobile (≤ 576px) */
 @media (max-width: 576px) {
     /* Adjust the Navigation */
     .nav {
