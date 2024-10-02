@@ -17,6 +17,33 @@ window.addEventListener('scroll', function() {
     img.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var galleryItems = document.querySelectorAll('.photo-item img');
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var closeBtn = document.querySelector('.lightbox .close');
+
+    // Add click event to each image in the gallery
+    galleryItems.forEach(function(img) {
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'flex'; // Show the lightbox
+            lightboxImg.src = this.src; // Set the clicked image as the source
+        });
+    });
+
+    // Close the lightbox when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none'; // Hide the lightbox
+    });
+
+    // Close the lightbox if the user clicks outside the image
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
+
 function setupSmoothScrolling() {
     document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
