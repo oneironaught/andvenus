@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleServiceDescriptions();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var img = document.getElementById('animated-image');
+    img.style.opacity = 1; // Fades in the image
+});
+
+window.addEventListener('scroll', function() {
+    var img = document.getElementById('animated-image');
+    var scrollPosition = window.pageYOffset;
+    // Translate the image based on the scroll position
+    img.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
+});
+
 function setupSmoothScrolling() {
     document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
