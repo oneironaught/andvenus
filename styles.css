@@ -228,6 +228,14 @@ section {
     cursor: pointer;
 }
 
+#tour ul li {
+    margin-bottom: 10px; /* Adjusts spacing between list items */
+}
+
+#tour h2 {
+    margin-top: 30px; /* Adds some space above section titles */
+}
+
 /* This styles the footer */
 footer {
     text-align: center;
