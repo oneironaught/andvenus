@@ -18,6 +18,18 @@ a:hover {
     color: rgb(79, 109, 231);
 }
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Force the page to stop horizontal scrolling */
+}
+
+.container {
+    max-width: 100%; /* Ensure no container exceeds 100% width */
+    overflow-x: hidden; /* Hide overflow */
+}
+
 body {
     background-color: #000;
     color: #fff;
@@ -54,19 +66,6 @@ header {
 header .container {
     position: relative;
     z-index: 1;
-}
-
-/* This styles the nav bar */
-.banner {
-    display: block;
-    height: 100%; /* Ensure the banner stretches fully */
-    margin-bottom: 0; /* Remove margin below the banner */
-}
-
-/* Ensure header has no extra margin/padding */
-header {
-    margin: 0;
-    padding: 0;
 }
 
 /* General styles for the nav-pills to remain horizontal */
