@@ -43,14 +43,13 @@ header {
     position: sticky;
     height: 300px;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;;
 }
 
 #banner {
     width: 100%;
     height: 330px; /* Adjust based on your needs */
     overflow: hidden;
-    position: sticky;
 }
 
 #animated-image {
@@ -61,11 +60,12 @@ header {
     transition: transform 2s ease; /* Smooth animation for transform */
     opacity: 0;
     transition: opacity 2s ease;
+    overflow: hidden;
 }
 
 header .container {
-    position: sticky;
     z-index: 1;
+    overflow: visible;
 }
 
 /* General styles for the nav-pills to remain horizontal */
