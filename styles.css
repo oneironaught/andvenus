@@ -40,23 +40,23 @@ body {
 }
 
 header {
-    position: relative;
+    position: sticky;
     height: 300px;
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
 }
 
 #banner {
     width: 100%;
     height: 330px; /* Adjust based on your needs */
     overflow: hidden;
-    position: relative;
+    position: sticky;
 }
 
 #animated-image {
     width: 100%;
     height: 90%;
-    position: relative;
+    position: sticky;
     object-fit: cover;
     transition: transform 2s ease; /* Smooth animation for transform */
     opacity: 0;
@@ -64,7 +64,7 @@ header {
 }
 
 header .container {
-    position: relative;
+    position: sticky;
     z-index: 1;
 }
 
@@ -90,7 +90,7 @@ header .container {
     background-color: rgba(58, 57, 57, 0.7);
     z-index: 10;
     text-align: left;
-    padding: 3px 0;
+    padding: 1px 0;
     margin-top: 0; /* Remove any margin above the nav */
 }
 
@@ -355,10 +355,11 @@ footer .fa-brands:hover {
     .nav {
         flex-direction: row; /* Stack the navigation items vertically */
         padding: 0; /* Remove excess padding */
+        margin-top: 0;
     }
 
     .nav a {
-        padding: 42px 0; /* Adjust padding for smaller screens */
+        padding: 20px 0; /* Adjust padding for smaller screens */
         font-size: 14px; /* Reduce font size slightly */
     }
 
