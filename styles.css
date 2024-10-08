@@ -234,11 +234,11 @@ section {
     cursor: pointer;
 }
 
-#tour ul li {
+#shows ul li {
     margin-bottom: 10px; /* Adjusts spacing between list items */
 }
 
-#tour h2 {
+#shows h2 {
     margin-top: 30px; /* Adds some space above section titles */
 }
 
@@ -268,7 +268,7 @@ footer .fa-brands:hover {
     background-color: #111;
 }
 
-#tour {
+#shows {
     background-color: #222;
 }
 
@@ -320,8 +320,11 @@ footer .fa-brands:hover {
 }
 
 .lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;  /* 90% of the viewport width */
+    max-height: 90vh; /* 90% of the viewport height */
+    width: auto;      /* Adjust width automatically */
+    height: auto;     /* Adjust height automatically */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
 
 .lightbox .close {
