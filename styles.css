@@ -82,6 +82,7 @@ header .container {
 
 .nav {
     position: absolute;
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -116,6 +117,7 @@ nav ul {
     padding: 0;
     margin: 0;
     text-align: center;
+    position: relative;
 }
 
 nav ul li {
@@ -142,7 +144,7 @@ nav ul li a {
     top: 100%;  /* Ensure the dropdown appears below the button */
     left: 0;
     transform: none; /* Remove any transformations that might be moving it */
-    z-index: 9999;
+    z-index: 1000;
 }
 
 /* Dropdown links */
@@ -155,10 +157,12 @@ nav ul li a {
 .dropdown-menu .dropdown-item:hover {
     background-color: #555; /* Change background color on hover */
     color: white; /* Keep text color on hover */
+    display: inline-block;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+/* Ensure the dropdown closes on click-off */
+.dropdown-toggle {
+    cursor: pointer;
 }
 
 /* Scrolling text */
