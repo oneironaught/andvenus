@@ -89,14 +89,13 @@ header .container {
     width: 100%;
     height: auto;
     background-color: rgba(58, 57, 57, 0.7);
-    z-index: 10;
+    z-index: 1000;
     text-align: left;
     padding: 1px 0;
     margin-top: 0; /* Remove any margin above the nav */
 }
 
 .nav a {
-    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -133,30 +132,32 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* This styles the dropdown menu */
-.dropdown-content {
-    display: none;
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #333; /* Background color for the dropdown */
+    min-width: 160px; /* Set minimum width */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    border: none; /* Remove default border */
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 15;
-    top: 100%;
+    top: 100%;  /* Ensure the dropdown appears below the button */
     left: 0;
+    transform: none; /* Remove any transformations that might be moving it */
+    z-index: 9999;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
+/* Dropdown links */
+.dropdown-menu .dropdown-item {
+    color: white; /* Text color */
+    padding: 12px 16px; /* Padding around the text */
     text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #555;
+.dropdown-menu .dropdown-item:hover {
+    background-color: #555; /* Change background color on hover */
+    color: white; /* Keep text color on hover */
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 

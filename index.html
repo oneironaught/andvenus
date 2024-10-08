@@ -34,15 +34,17 @@
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="#about">About</a></li>
                 <li role="presentation"><a href="#shows">Shows</a></li>
-                <li role="presentation" class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Merch</a>
-                    <div class="dropdown-content">
-                        <a href="#tshirts">T-Shirts</a>
-                        <a href="#stickers">Stickers</a>
-                        <a href="#vinyl">Vinyl</a>
-                    </div>
-                </li>
                 <li role="presentation"><a href="#photos">Photos</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Merch
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#tshirts">T-Shirts</a></li>
+                        <li><a class="dropdown-item" href="#stickers">Stickers</a></li>
+                        <li><a class="dropdown-item" href="#vinyl">Vinyl</a></li>
+                    </ul>
+                </li>
                 <li role="presentation"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -134,13 +136,6 @@
         </ul>
     </div>
 </section>
-<!-- Merch Section-->
-    <section id="merch">
-        <div class="container">
-            <h2>Merch</h2>
-            <p>Check back for our latest merchandise <a href="#">here</a>.</p>
-        </div>
-    </section>
 <!-- Photos Section-->
 <section id="photos">
     <!-- Photo gallery section -->
@@ -226,6 +221,13 @@
     <span class="close">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
 </div>
+</section>
+<!-- Merch Section-->
+<section id="merch">
+    <div class="container">
+        <h2>Merch</h2>
+        <p>Check back for our latest merchandise <a href="#">here</a>.</p>
+    </div>
 </section>    
 <!-- Contact Section-->
     <section id="contact">
@@ -257,5 +259,7 @@
         <a href="index.html" style="color:whitesmoke; text-decoration: none;">© 2024 And Venus</a>
         </div>
     </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
