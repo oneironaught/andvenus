@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>And Venus</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">    <!-- Bootstrap 5 JS (Bundle includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Linking Parallax-->
-    <script src="https://cdn.jsdelivr.net/parallax.js/1.5.0/parallax.min.js"></script>    
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <!--Linking Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/apple-touch-icon.png">
-    <!-- Linking Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
     <!-- Linking Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/986e342f6d.js" crossorigin="anonymous"></script>
-    <!-- Linking JavaScript -->
-    <script src="script.js"></script>
+    <!--Calendly-->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-<body>
-<header>
-<!--Banner -->        
-<div id="banner">
-    <img src="assets/andvenus.png" alt="And Venus Banner" id="animated-image">
-</div>
-<!-- Navigation Bar-->
-        <div class="nav">
-        <nav>
-            <ul class="nav nav-pills">
-                <li role="presentation"><a href="#about">About</a></li>
-                <li role="presentation"><a href="#shows">Shows</a></li>
-                <li role="presentation"><a href="#photos">Photos</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                        Merch
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#tshirts">T-Shirts</a></li>
-                        <li><a class="dropdown-item" href="#stickers">Stickers</a></li>
-                        <li><a class="dropdown-item" href="#vinyl">Vinyl</a></li>
-                    </ul>
-                </li>
-                <li role="presentation"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <a href="#contact" class="cta-button">Contact</a>
+            <a href="#about" class="cta-button">About</a>
+            <a href="#shows" class="cta-button">Shows</a>
+            <a href="#photos" class="cta-button">Photos</a>
+            <a href="#merch" class="cta-button">Merch</a>
+        </div>
+    </section>
 
 <!--Music Carousel-->
-<section id="player">
-	<div class="container text-center">
-		<h2 class="scroll-text">Listen to Our Music</h2><h2><i class="fa-duotone fa-solid fa-headphones fa-bounce"></i></h2>
+<div class="content-section" id="music" data-aos="fade-up">
+    <h2 class="scroll-text">Listen to Our Music</h2><h2><i class="fa-duotone fa-solid fa-headphones fa-bounce"></i></h2>
 		<div id="musicCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<iframe allow="autoplay" src="https://open.spotify.com/embed/artist/4CPEqoLO6sSiU3TS6Gygc0?utm_source=generator&theme=0" width="500" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					<iframe allow="autoplay" src="https://open.spotify.com/embed/artist/4CPEqoLO6sSiU3TS6Gygc0?utm_source=generator&theme=0" width="400" height="550" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 				</div>
             <br>    
         <h2>Available now on all streaming platforms</h2><br>
@@ -72,11 +51,11 @@
             <a href="https://deezer.page.link/JejWLxyXcjMMTv8YA" class="fa-brands fa-deezer fa-bounce" style="color: #8f69ba" target="_blank"  rel="noopener noreferrer" aria-label="Deezer Logo"></a>
            </h2>            
 </div>
-</section>
-<!-- About Section-->
-    <section id="about">
-        <div class="container">
-            <h2>About</h2>
+        </div>
+
+<!--About section-->
+    <div class="content-section" id="about" data-aos="fade-up">
+        <h2>About</h2>
             <p> And Venus is an up-and-coming band hailing from the vibrant music scene of The Rio Grand Valley<br>
                 with influences ranging from classic rock legends such as Led Zeppelin and Pink Floyd to modern indie icons The Mars Volta. 
                 <br>
@@ -90,17 +69,16 @@
                 resonate deeply with their listeners.<br></p>
                 <h2><i class="fa-solid fa-ellipsis"></i></h2>
                 <p><u>Current Members:</u><br>
-                    Bassist- Adolfo Perez<br> 
-                    Vocals and guitars- Robert Ruelas <br> 
-                    Drums and vocals- Fernando Cruz<br> 
-                    Lead guitars- Nathaniel Garcia<br>
-                    Keys & Synths- Elijah Cruz<br>
+                    Adolfo Perez- Bass/Guitar<br> 
+                    Robert Ruelas- Vocals/Guitar <br> 
+                    Fernando Cruz- Drums and vocals<br> 
+                    Nathaniel Garcia- Lead guitar<br>
+                    Elijah Cruz- Keys & Synth<br>
                 </p>
-        </div>
-    </section>
-<!--Tour Section-->
-<section id="shows">
-    <div class="container">
+    </div>
+
+    <!-- Shows section -->
+    <div class="content-section" id="shows" data-aos="fade-up">
         <h2>Shows</h2>
         <ul class="list-unstyled">
             <ul>
@@ -133,130 +111,123 @@
                 <a href="#">Sold Out</a>
             </ul>
         </ul>
+    </div>   
+
+<!-- Photos section -->
+<div class="content-section" id="photos" data-aos="fade-up">
+    <h2>Photos</h2>
+    <div class="photos-container">
+        <div class="photo-container">
+            <img src="assets/images/nate_aces.jpg" alt="Photo 1" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/dofo_aces.jpg" alt="Photo 2" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/fer_aces.jpg" alt="Photo 3" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_aces.jpg" alt="Photo 4" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/nate_aces_solo.jpg" alt="Photo 5" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/nate_papa.jpg" alt="Photo 6" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/fer_papa.jpg" alt="Photo 7" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_maracas.jpg" alt="Photo 8" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_scream_maracas.jpg" alt="Photo 9" class="photos" loading="lazy">
+        </div>    
+        <div class="photo-container">
+            <img src="assets/images/dofo_papa.jpg" alt="Photo 10" class="photos" loading="lazy">
+        </div> 
+        <div class="photo-container">
+            <img src="assets/images/bob_walrus.jpg" alt="Photo 11" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/nate_walrus.jpg" alt="Photo 12" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_walrus2.jpg" alt="Photo 13" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/fer_SOR_studio.jpg" alt="Photo 14" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/fer_SOR_studio2.jpg" alt="Photo 15" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/nate_SOR_studio.jpg" alt="Photo 16" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/nate_SOR_drums.jpg" alt="Photo 17" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/dofo_SOR_studio.jpg" alt="Photo 18" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/dofo_bass_closeup.jpg" alt="Photo 19" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_SOR_studio2.jpg" alt="Photo 20" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_guitar_studio.jpg" alt="Photo 21" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/av_jitters.jpg" alt="Photo 22" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/console_SOR_studio.jpg" alt="Photo 23" class="photos" loading="lazy">
+        </div>
+        <div class="photo-container">
+            <img src="assets/images/bob_fer_dofo_rose.jpg" alt="Photo 24" class="photos" loading="lazy">
+        </div>   
     </div>
-</section>
-<!-- Photos Section-->
-<section id="photos">
-    <!-- Photo gallery section -->
-    <h2>Photo Gallery</h2>
-    <br>
-    <div class="photo-gallery">
-        <div class="photo-item">
-            <img src="assets/nate_aces.jpg" alt="Photo 1">
-        </div>
-        <div class="photo-item">
-            <img src="assets/dofo_aces.jpg" alt="Photo 2">
-        </div>
-        <div class="photo-item">
-                <img src="assets/fer_aces.jpg" alt="Photo 3">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_aces.jpg" alt="Photo 4">
-            </div>
-            <div class="photo-item">
-                <img src="assets/nate_aces_solo.jpg" alt="Photo 5">
-            </div>
-            <div class="photo-item">
-                <img src="assets/nate_papa.jpg" alt="Photo 6">
-            </div>
-            <div class="photo-item">
-                <img src="assets/fer_papa.jpg" alt="Photo 7">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_maracas.jpg" alt="Photo 8">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_scream_maracas.jpg" alt="Photo 9">
-            </div>
-            <div class="photo-item">
-                <img src="assets/dofo_papa.jpg" alt="Photo 10">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_walrus.jpg" alt="Photo 11">
-            </div>
-            <div class="photo-item">
-                <img src="assets/nate_walrus.jpg" alt="Photo 12">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_walrus2.jpg" alt="Photo 13">
-            </div>
-            <div class="photo-item">
-                <img src="assets/fer_SOR_studio.jpg" alt="Photo 14">
-            </div>
-            <div class="photo-item">
-                <img src="assets/fer_SOR_studio2.jpg" alt="Photo 15">
-            </div>
-            <div class="photo-item">
-                <img src="assets/nate_SOR_studio.jpg" alt="Photo 16">
-            </div>
-            <div class="photo-item">
-                <img src="assets/nate_SOR_drums.jpg" alt="Photo 17">
-            </div>
-            <div class="photo-item">
-                <img src="assets/dofo_SOR_studio.jpg" alt="Photo 18">
-            </div>
-            <div class="photo-item">
-                <img src="assets/dofo_bass_closeup.jpg" alt="Photo 19">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_SOR_studio2.jpg" alt="Photo 20">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_guitar_studio.jpg" alt="Photo 21">
-            </div>
-            <div class="photo-item">
-                <img src="assets/av_jitters.jpg" alt="Photo 22">
-            </div>
-            <div class="photo-item">
-                <img src="assets/console_SOR_studio.jpg" alt="Photo 23">
-            </div>
-            <div class="photo-item">
-                <img src="assets/bob_fer_dofo_rose.jpg" alt="Photo 24">
-            </div>
+</div>
+
+<!-- Modal for Enlarging Photos -->
+<div id="photoModal" class="modal">
+    <div class="modal-content">
+        <img id="enlargedPhoto" src="" alt="Enlarged Photo">
+    </div>
+</div>
+
+<!-- Contact Section -->
+    <div class="container">
+        <div id="contact" class="content-section">
+            <h2>Contact</h2>
+            <h3>Thank you for visiting! We'd love to hear from you soon! 
+                <br>Please reach out via Calendly or <a href="mailto:andvenus@gmail.com" style="color: white;">via Email</a>.
+            </h3>
+<!-- Calendly inline widget begin -->
+<h3><div class="calendly-inline-widget" data-url="https://calendly.com/andvenus/30min" style="min-width:320px;height:700px;"></div></h3>
+     </div>
     </div>
 
-<!-- Lightbox modal -->
-<div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-</div>
-</section>
-<!-- Merch Section-->
-<section id="merch">
-    <div class="container">
-        <h2>Merch</h2>
-        <p>Check back for our latest merchandise <a href="#">here</a>.</p>
-    </div>
-</section>    
-<!-- Contact Section-->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            Booking: <br>
-            <a href="andvenus@gmail.com" style="color: white;">Contact us via Email</a>
-        </div>
-    </section>
 <!-- Footer -->
-    <footer>
-        <p>Follow us on:</p>
+    <footer class="footer">
         <div class="social-icons">
-        <a href="#" class="fa-brands fa-facebook" style="color: rgb(39, 39, 244)" target="_blank"  rel="noopener noreferrer" aria-label="Facebook Logo"></a>
-        <a href="#" class="fa-brands fa-instagram"style="color: tomato" target="_blank"  rel="noopener noreferrer" aria-label="Instagram Logo"></a>
-        <a href="#" class="fa-brands fa-twitter" style="color: lightblue" target="_blank"  rel="noopener noreferrer" aria-label="Twitter Logo"></a>
-        <a href="#" class="fa-brands fa-youtube" style="color: red" target="_blank"  rel="noopener noreferrer" aria-label="YouTube Logo"></a>
-        <a href="#" class="fa-brands fa-tiktok"style="color: black" target="_blank"  rel="noopener noreferrer" aria-label="TikTok Logo"></a>
+            <a href="https://www.linkedin.com/in/rruelas87/"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.facebook.com/bobby.ruelas/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/andvenus/"><i class="fa fa-instagram"></i></a>
         </div>
-        <div style="text-align: center;">
-            <a href="terms.html" style="color:#999999;">Terms of Use</a>
-            <span style="color:whitesmoke;"> | </span>
-            <a href="privacy.html" style="color:#999999;">Privacy Policy</a>
-        </div>
-    
-        <br>
-    
-        <div style="text-align: center;">
-        <a href="index.html" style="color:whitesmoke; text-decoration: none;">© 2024 And Venus</a>
-        </div>
+        © 2024 Robert Ruelas
     </footer>
+<!-- Back to Top Button -->
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Home</button>
+
+<!-- Linking JavaScript -->
+<script src="script.js"></script>
+<script>
+    AOS.init();
+</script>  
+
 </body>
 </html>

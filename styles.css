@@ -1,414 +1,335 @@
-/* Inactive link (not visited) */
-a:link {
-    color: #007bff;
-}
-
-/* Visited link */
-a:visited {
-    color: rgb(240, 9, 240);
-}
-
-/* Active link (when clicked) */
-a:active {
-    color: red;
-}
-
-/* Hover link (when hovered over) */
-a:hover {
-    color: rgb(79, 109, 231);
-}
-
-html, body {
-    width: 100%;
+/* General Reset for Margin and Padding */
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Force the page to stop horizontal scrolling */
-    scroll-behavior: smooth;
-}
-
-.container {
-    max-width: 100%; /* Ensure no container exceeds 100% width */
-    overflow-x: hidden; /* Hide overflow */
-}
-
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-header {
-    position: sticky;
-    height: 300px;
-    width: 100%;
-    overflow: hidden;;
-}
-
-#banner {
-    width: 100%;
-    height: 330px; /* Adjust based on your needs */
-    overflow: hidden;
-}
-
-#animated-image {
-    width: 100%;
-    height: 90%;
-    position: sticky;
-    object-fit: cover;
-    transition: transform 2s ease; /* Smooth animation for transform */
-    opacity: 0;
-    transition: opacity 2s ease;
-    overflow: hidden;
-}
-
-header .container {
-    z-index: 1;
-    overflow: visible;
-}
-
-/* General styles for the nav-pills to remain horizontal */
-.nav-pills {
-    display: flex;
-    justify-content: left;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    box-sizing: border-box;
   }
   
-  .nav-pills .nav-item {
-    margin: 0 10px; /* Add horizontal space between nav items */
-  }
-
-.nav {
-    position: absolute;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    bottom: 0;
+  /* Full Height for HTML and Body */
+  html, body {
+    height: 100%;
     width: 100%;
-    height: auto;
-    background-color: rgba(58, 57, 57, 0.7);
-    z-index: 1000;
-    text-align: left;
-    padding: 1px 0;
-    margin-top: 0; /* Remove any margin above the nav */
-}
-
-.nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Hover effect */
-.nav a:hover {
-    transform: scale(1.2); /* Enlarge the link */
-    background-color: #555; /* Optional: Change background color on hover */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
     margin: 0;
-    text-align: center;
-    position: relative;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-    position: relative;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-    background-color: #333; /* Background color for the dropdown */
-    min-width: 160px; /* Set minimum width */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    border: none; /* Remove default border */
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border: none;
     position: absolute;
-    top: 100%;  /* Ensure the dropdown appears below the button */
+    top: 100%;
     left: 0;
-    transform: none; /* Remove any transformations that might be moving it */
     z-index: 1000;
-}
-
-/* Dropdown links */
-.dropdown-menu .dropdown-item {
-    color: white; /* Text color */
-    padding: 12px 16px; /* Padding around the text */
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu .dropdown-item {
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    background-color: #555; /* Change background color on hover */
-    color: white; /* Keep text color on hover */
-    display: inline-block;
-}
-
-/* Ensure the dropdown closes on click-off */
-.dropdown-toggle {
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #555;
+  }
+  
+  /* Dropdown Toggle */
+  .dropdown-toggle {
     cursor: pointer;
-}
-
-/* Scrolling text */
-.scroll-text {
-    display: inline-block;
-    white-space: nowrap; /* Prevents the text from wrapping */
-    animation: scroll 10s linear infinite;
-    font-size: 2rem; /* Adjust font size as needed */
   }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%); /* Start offscreen to the right */
-    }
-    100% {
-      transform: translateX(-100%); /* Move to offscreen left */
-    }
-  }
-
-/* Ensure the carousel iframe is responsive */
-.carousel-item iframe {
+  
+  /* Carousel iframe Responsiveness */
+  .carousel-item iframe {
     width: 100%;
     height: auto;
-    max-width: 500px; /* Set a max-width for better control */
-    max-height: 550px;
+    max-width: 500px;
     margin: 0 auto;
     display: block;
-}
-
-/* Ensure the carousel itself is centered */
-.carousel {
+  }
+  
+  /* Carousel Container */
+  .carousel {
     width: 100%;
-    max-width: 600px; /* Ensure the carousel itself has a max width */
+    max-width: 500px;
     margin: 0 auto;
-}
-
-/* Keep carousel controls at 5% width */
-.carousel-control-prev, .carousel-control-next {
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev, .carousel-control-next {
     width: 5%;
-}
-
-/* Adjust button sizes for better appearance */
-.carousel-control-prev-icon, .carousel-control-next-icon {
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 30px;
     height: 30px;
-}
-
-/* Main section */
-section {
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Music icons */
-
-.music .fa-brands {
-    display: relative;
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.music .fa-brands:hover {
-    margin: 0 15px;
-    transition: color 0.3s ease;
-    transform: scale(1.2);
-    font-size: 1.5em;    
-    cursor: pointer;
-}
-
-#shows ul li {
-    margin-bottom: 10px; /* Adjusts spacing between list items */
-}
-
-#shows h2 {
-    margin-top: 30px; /* Adds some space above section titles */
-}
-
-/* This styles the footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-}
-
-footer .social-icons {
-    margin: 10px 0;
-}
-
-footer .fa-brands {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer .fa-brands:hover {
-    color: #444;
-}
-
-#about {
-    background-color: #111;
-}
-
-#shows {
-    background-color: #222;
-}
-
-#merch {
-    background-color: #333;
-}
-
-#contact {
-    background-color: #444;
-}
-
-/* Photo gallery grid */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    margin: 20px;
-}
-
-   /* Photo item styling */
-.photo-item {
+  }
+  
+  /* Music Icons */
+  .music .fa-brands {
     position: relative;
-    overflow: hidden;
-}
-
-.photo-item img {
+    margin: 0 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .music .fa-brands:hover {
+    transform: scale(1.2);
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url('assets/images/hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fcf592;
+    border: solid #111;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 280px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #fe3131;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Full-width Sections */
+  .content-section {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #222;
+  }
+  
+  /* Music Section Background */
+  #music {
+    background-color: #111;
+  }
+  
+  /* Section Background Colors */
+  #about {
+    background-color: #222;
+  }
+  
+  #shows {
+    background-color: #333;
+  }
+  
+  #photos {
+    background-color: #444;
+  }
+  
+  #contact {
+    background-color: #666;
+  }
+  
+  /* Heading Styles */
+  h1, h2, h3 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Photo Grid */
+  .photos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .photo-container {
+    cursor: pointer;
+  }
+  
+  .photo-container img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    border-radius: 8px;
     transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-.photo-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Lightbox styling */
-.lightbox {
-    display: none;
+  }
+  
+  .photo-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Modal for Enlarging Photos */
+  .modal {
+    display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-}
-
-.lightbox-content {
-    max-width: 90vw;  /* 90% of the viewport width */
-    max-height: 90vh; /* 90% of the viewport height */
-    width: auto;      /* Adjust width automatically */
-    height: auto;     /* Adjust height automatically */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
-}
-
-.lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.form-group label {
-    color: #fff;
-}
-
-.form-control {
-    background-color: #222;
-    color: #fff;
-    border: 1px solid #555;
-}
-
-.form-control::placeholder {
-    color: #bbb;
-}
-
-/* Reset margin and padding for banner and navbar */
-.banner, .nav {
-    margin: 0;
-    padding: 0;
-}
-
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
   
-/* General Media Query for Mobile (≤ 576px) */
-@media (max-width: 576px) {
-    /* Adjust the Navigation */
-    .nav {
-        flex-direction: row; /* Stack the navigation items vertically */
-        padding: 0; /* Remove excess padding */
-        margin-top: 0;
+  .modal.show {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-content.show {
+    transform: scale(1);
+  }
+  
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: black;
+    color: #fcf592;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Social Icons in Footer */
+  .social-icons a {
+    margin: 0 10px;
+    color: #fcf592;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .social-icons a:hover {
+    color: #fe3131;
+  }
+  
+  /* Back to Top Button */
+  #backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 18px;
+    background-color: #fcf592;
+    color: black;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #backToTopBtn:hover {
+    background-color: #fe3131;
+  }
+  
+  
+  /* On screens 768px and below, push down the hero content */
+  @media screen and (max-width: 768px) {
+    .hero-content {
+      margin-top: 200px; /* Adjust this value as needed */
     }
-
-    .nav a {
-        padding: 20px 0; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Reduce font size slightly */
+  }
+  
+  /* On screens 480px and below, push it down even more */
+  @media screen and (max-width: 480px) {
+    .hero-content {
+      margin-top: 200px; /* Adjust this value as needed */
     }
-
-    .nav-pills {
-        justify-content: space-around; /* Space out items horizontally if screen allows */
-        flex-wrap: wrap; /* Allow wrapping if screen is too narrow */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .hero-section {
+      height: auto;
+      padding: 20px;
     }
-
-    .nav-pills .nav-item {
-        margin: 5px 0; /* Adjust spacing between items */
+  
+    .cta-button {
+      margin-top: 20px;
     }
-
-    /* Adjust the Music Carousel */
-    #musicCarousel iframe {
-        width: 100%; /* Ensure the iframe scales to full width */
-        height: auto; /* Adjust the height to maintain aspect ratio */
+  
+    .photos-container {
+      grid-template-columns: 1fr 1fr;
     }
-
-    /* Adjust banner for smaller screens */
-    .banner {
-        height: 200px; /* Reduce banner height for smaller screens */
+  
+    .content-section {
+      padding: 40px 20px;
     }
-
-    /* Adjust section padding */
-    section {
-        padding: 20px 0; /* Reduce padding for smaller screens */
+  
+    .modal-content {
+      max-width: 85%;
+      max-height: 85%;
     }
-
-    /* Adjust font sizes for headings and text */
-    h2 {
-        font-size: 22px; /* Reduce heading size */
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 16px;
     }
-
-    p {
-        font-size: 14px; /* Reduce paragraph text size */
+  
+    .photos-container {
+      grid-template-columns: 1fr;
     }
-
-    /* Adjust music icons */
-    .music .fa-brands {
-        font-size: 20px; /* Reduce icon size for smaller screens */
-        margin: 0 10px; /* Reduce margin between icons */
+  
+    .content-section {
+      padding: 30px 15px;
     }
-}
+  
+    .modal-content {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }

@@ -1,131 +1,105 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Setup smooth scrolling for internal links
-    setupSmoothScrolling();
+// AOS Initialization (Animate on Scroll)
+AOS.init();
 
-    // Setup toggling for service descriptions
-    toggleServiceDescriptions();
-
-    // Initialize parallax effect for image
-    initializeParallaxEffect();
-
-    // Initialize lightbox for photo gallery
-    setupLightbox();
-
-    // Initialize carousel
-    initializeCarousel();
-
-    // Adjust scroll speed for slider based on screen size
-    adjustScrollSpeed();
-});
-
-// Function to initialize smooth scrolling for internal links
-function setupSmoothScrolling() {
-    document.querySelectorAll('a.nav-link, .dropdown-item').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                e.preventDefault();  // Prevent default link behavior
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Scroll smoothly to the target element
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,  // Adjust for navbar height
-                        behavior: "smooth"
-                    });
-                } else {
-                    console.error('No element found for ID:', targetId);
-                }
-            }
-        });
-    });
+// Toggle Mobile Navigation Menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
 }
 
-// Function to toggle service descriptions based on user click
-function toggleServiceDescriptions() {
-    document.querySelectorAll('.service-item').forEach(item => {
-        item.addEventListener('click', function () {
-            const serviceId = this.getAttribute('data-service');
-            document.querySelectorAll('.service-description').forEach(description => {
-                if (description.id === serviceId) {
-                    // Toggle visibility of the corresponding service description
-                    description.style.display = description.style.display === 'block' ? 'none' : 'block';
-                } else {
-                    // Hide all other descriptions
-                    description.style.display = 'none';
-                }
-            });
-        });
-    });
-}
+// Back to Top Button Functionality
+const backToTopBtn = document.getElementById('backToTopBtn');
 
-// Function to initialize parallax effect for image
-function initializeParallaxEffect() {
-    var img = document.getElementById('animated-image');
-    if (img) {
-        img.style.opacity = 1; // Fades in the image after the DOM is loaded
-        window.addEventListener('scroll', function () {
-            var scrollPosition = window.pageYOffset;
-            img.style.transform = "translateY(" + (scrollPosition * 0.5) + "px)";
-        });
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
     }
 }
 
-// Function to initialize the lightbox for the photo gallery
-function setupLightbox() {
-    var galleryItems = document.querySelectorAll('.photo-item img');
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var closeBtn = document.querySelector('.lightbox .close');
-
-    galleryItems.forEach(function (img) {
-        img.addEventListener('click', function () {
-            lightbox.style.display = 'flex'; // Show the lightbox
-            lightboxImg.src = this.src; // Set the clicked image as the source
-        });
-    });
-
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function () {
-            lightbox.style.display = 'none'; // Hide the lightbox
-        });
-    }
-
-    if (lightbox) {
-        lightbox.addEventListener('click', function (event) {
-            if (event.target === lightbox) {
-                lightbox.style.display = 'none'; // Close lightbox if clicked outside the image
-            }
-        });
-    }
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
-// Function to initialize the carousel
-function initializeCarousel() {
-    $('#musicCarousel').carousel({
-        interval: 2000 // Auto-slide interval
-    });
+// Function to open the modal and display the clicked image
+  function openModal(src, x, y) {
+    const modal = document.getElementById('photoModal');
+    const modalContent = document.querySelector('.modal-content');
+    const enlargedPhoto = document.getElementById('enlargedPhoto');
 
-    document.querySelector(".left.carousel-control").addEventListener('click', function () {
-        $('#musicCarousel').carousel('prev');
-    });
+    enlargedPhoto.src = src;
+    
+// Display the modal
+    modal.style.display = 'flex'; // Ensure the modal is displayed
+    modal.style.opacity = '1'; // Make the modal visible
 
-    document.querySelector(".right.carousel-control").addEventListener('click', function () {
-        $('#musicCarousel').carousel('next');
-    });
-}
+// Set initial position where the image was clicked
+    modalContent.style.transformOrigin = `${x}px ${y}px`; // Set the origin based on the click position
+    modalContent.style.transform = 'scale(1)'; // Reset the scale for the image
 
-// Function to adjust the slider scroll speed based on screen width
-function adjustScrollSpeed() {
-    const slider = document.querySelector('.slider');
-    if (slider) {
-        const screenWidth = window.innerWidth;
-        
-        if (screenWidth < 480) {
-            slider.style.animationDuration = '60s'; // Slower speed for small screens
-        } else if (screenWidth < 768) {
-            slider.style.animationDuration = '40s'; // Medium speed for tablets
+// Add the "show" class for smooth transition
+    setTimeout(() => {
+      modal.classList.add('show'); // Make the modal visible with transition
+      modalContent.classList.add('show'); // Make the image grow smoothly
+    }, 10); // Add a slight delay to ensure the display and opacity are applied before transition
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    const modal = document.getElementById('photoModal');
+    const modalContent = document.querySelector('.modal-content');
+
+    modalContent.classList.remove('show'); // Hide the image smoothly
+
+    setTimeout(() => {
+      modal.style.opacity = '0'; // Fade out the modal
+      modal.style.display = 'none'; // Completely hide after transition
+    }, 300); // Delay matches the transition duration
+  }
+
+  // Add click event listeners to all images
+  const photoContainers = document.querySelectorAll('.photo-container');
+  photoContainers.forEach(container => {
+    container.addEventListener('click', function (event) {
+      const imgSrc = this.querySelector('img').src;
+      const x = event.clientX; // Get the X position of the click
+      const y = event.clientY; // Get the Y position of the click
+      openModal(imgSrc, x, y); // Pass the click position to the modal
+    });
+  });
+
+  // Close the modal when clicking outside of the image
+  const modal = document.getElementById('photoModal');
+  modal.addEventListener('click', function (event) {
+    const modalContent = document.querySelector('.modal-content');
+    if (!modalContent.contains(event.target)) {
+      closeModal(); // Close the modal if clicked outside the image
+    }
+  });
+
+
+// Accordion Functionality
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionItem = button.parentElement;
+        const content = accordionItem.querySelector('.accordion-content');
+
+        // Toggle the active class
+        accordionItem.classList.toggle('active');
+
+        // Check if the accordion item is active, adjust maxHeight accordingly
+        if (accordionItem.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + 'px'; // Expand content
         } else {
-            slider.style.animationDuration = '20s'; // Normal speed for larger screens
+            content.style.maxHeight = 0; // Collapse content
         }
-    }
-}
+    });
+});
