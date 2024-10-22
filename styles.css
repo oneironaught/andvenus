@@ -238,7 +238,8 @@
   .footer {
     background-color: black;
     color: #fcf592;
-    padding: 20px 0;
+    padding: 10px 0;
+    padding-top: 2%;
     text-align: center;
     width: 100%;
   }
