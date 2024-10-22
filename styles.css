@@ -94,7 +94,7 @@
     background-image: url('assets/images/hero.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +102,7 @@
     color: white;
     padding: 20px;
   }
+  
   
   .hero-content {
     animation: fadeIn 3s ease-in-out;
@@ -274,62 +275,75 @@
     background-color: #fe3131;
   }
   
-  
-  /* On screens 768px and below, push down the hero content */
-  @media screen and (max-width: 768px) {
-    .hero-content {
-      margin-top: 200px; /* Adjust this value as needed */
-    }
+/* On screens 768px and below */
+@media screen and (max-width: 768px) {
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
   }
-  
-  /* On screens 480px and below, push it down even more */
-  @media screen and (max-width: 480px) {
-    .hero-content {
-      margin-top: 200px; /* Adjust this value as needed */
-    }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-  
-  /* Responsive Adjustments */
-  @media screen and (max-width: 768px) {
-    .hero-section {
-      height: auto;
-      padding: 20px;
-    }
-  
-    .cta-button {
-      margin-top: 20px;
-    }
-  
-    .photos-container {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .content-section {
-      padding: 40px 20px;
-    }
-  
-    .modal-content {
-      max-width: 85%;
-      max-height: 85%;
-    }
+}
+
+
+  /* Adjustments for screens 768px and below */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    width: 100vw; /* Ensure it matches the viewport width */
+    max-width: 100vw; /* Prevent exceeding the viewport */
+    height: 100vh; /* Maintain full viewport height */
+    padding: 0;
+    margin: 0 auto; /* Center the section */
+    overflow: hidden; /* Hide any extra content */
   }
-  
-  @media screen and (max-width: 480px) {
-    .cta-button {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  
-    .photos-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .content-section {
-      padding: 30px 15px;
-    }
-  
-    .modal-content {
-      max-width: 95%;
-      max-height: 95%;
-    }
+
+  .hero-content {
+    margin: 0 auto; /* Center content */
+    padding: 1px; /* Add small padding to avoid edge touching */
+    padding-top: 400px;
+    width: 100%;
+    max-width: 100%; /* Prevent content from causing overflow */
   }
+
+  .cta-button {
+    margin-top: 30px; /* Adjust space above the button */
+    padding: 10px 20px;
+  }
+
+
+.content-section {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  overflow-x: hidden;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    width: 100%; /* Ensure it matches the viewport width */
+    height: 100vh; /* Maintain full viewport height */
+    padding: 0;
+    margin: 0 auto; /* Center the section */
+    overflow: hidden; /* Hide any extra content */
+  }
+
+  .hero-content {
+    margin: 0 auto; /* Center content */
+    padding: 1px; /* Add small padding to avoid edge touching */
+    padding-top: 500px;
+    width: 100%;
+    max-width: 100%; /* Prevent content from causing overflow */
+  }
+
+  .content-section {
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+  }
+}
