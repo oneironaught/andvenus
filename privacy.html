@@ -1,57 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>And Venus</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1hrdEFy2szKq3u+uO6oB57bgos5SbNEa2Z2lD9zIvAOnpK3Uh0E6hzp6" crossorigin="anonymous">
-    <!-- Bootstrap 5 JS (Bundle includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> 
-    <!--Linking HTML-->
-    <link rel="stylesheet" type="text/html" href="index.html">   
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <!--Linking Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/apple-touch-icon.png">
-    <!-- Linking Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
     <!-- Linking Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/986e342f6d.js" crossorigin="anonymous"></script>
-    <!-- Linking JavaScript -->
-    <script src="script.js"></script>
+    <!--Calendly-->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-<header>
-<!--Banner -->        
-<div id="banner">
-    <img src="assets/andvenus.png" alt="And Venus Banner" id="animated-image">
-</div>
-<!-- Navigation Bar-->
-        <div class="nav">
-        <nav>
-            <ul class="nav nav-pills">
-                <li role="presentation"><a href="index.html">Home</a></li>
-                <li role="presentation"><a href="index.html#about">About</a></li>
-                <li role="presentation"><a href="index.html#tour">Tour</a></li>
-                <li role="presentation" class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Merch</a>
-                    <div class="dropdown-content">
-                        <a href="index.html#tshirts">T-Shirts</a>
-                        <a href="index.html#posters">Posters</a>
-                        <a href="index.html#vinyl">Vinyl</a>
-                    </div>
-                </li>
-                <li role="presentation"><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>       
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <a href="#contact" class="cta-button">Contact</a>
+            <a href="#about" class="cta-button">About</a>
+            <a href="#shows" class="cta-button">Shows</a>
+            <a href="#photos" class="cta-button">Photos</a>
+            <a href="#merch" class="cta-button">Merch</a>
+        </div>
+    </section>
+     
 <!-- "Privacy" section -->
 <body>
-<section id="privacy" class="privacy">
-<h1 class="section-title secondary-border">Privacy Policy</h1><br>
-    <div class="justify-content">
+<div class="content-section" id="privacy" data-aos="fade-up">
+
     <u><h2>Effective Date: 09/12/2024</h2></u>
 <br>
 <br>
@@ -123,26 +105,36 @@ If you have any questions or concerns about this Privacy Policy,
     </div>
 
 <!-- Footer -->
-<footer>
-  <p>Follow us on:</p>
-  <div class="social-icons">
-  <a href="#" class="fa-brands fa-facebook" style="color: rgb(39, 39, 244)" target="_blank"  rel="noopener noreferrer" aria-label="Facebook Logo"></a>
-  <a href="#" class="fa-brands fa-instagram"style="color: tomato" target="_blank"  rel="noopener noreferrer" aria-label="Instagram Logo"></a>
-  <a href="#" class="fa-brands fa-twitter" style="color: lightblue" target="_blank"  rel="noopener noreferrer" aria-label="Twitter Logo"></a>
-  <a href="#" class="fa-brands fa-youtube" style="color: red" target="_blank"  rel="noopener noreferrer" aria-label="YouTube Logo"></a>
-  <a href="#" class="fa-brands fa-tiktok"style="color: black" target="_blank"  rel="noopener noreferrer" aria-label="TikTok Logo"></a>
-  </div>
-  <div style="text-align: center;">
-      <a href="terms.html" style="color:#999999;">Terms of Use</a>
-      <span style="color:whitesmoke;"> | </span>
-      <a href="privacy.html" style="color:#999999;">Privacy Policy</a>
-  </div>
-
-  <br>
-
-  <div style="text-align: center;">
-      <span style="color:whitesmoke;">© 2024 And Venus</span>
-  </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/andvenus/" style="color: rgb(24, 36, 195)" target="_blank" aria-label="Facebook Logo">
+                    <i class="fa fa-facebook-square"></i></a>
+        <a href="https://x.com/andvenus" style="color: rgb(11, 145, 255)" target="_blank" aria-label="Twitter Logo">
+                        <i class="fa fa-twitter"></i></a>            
+        <a href="https://www.instagram.com/andvenus/" style="color: rgb(179, 18, 39)" target="_blank" aria-label="Instagram Logo">
+                    <i class="fa fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@and.venus" style="color: rgb(131, 18, 153)" target="_blank" aria-label="TikTok Logo">
+                    <i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@and-venus" style="color: rgb(241, 22, 2)" target="_blank" aria-label="YouTube Logo">
+                    <i class="fa-brands fa-youtube"></i></a>            
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <a href="terms.html">Terms of Use</a>
+            <span style="color:whitesmoke;"> | </span>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+      
+        <br>
+        © 2024 Robert Ruelas
 </footer>
+<!-- Linking JavaScript -->
+<script src="script.js"></script>
+<script>
+    AOS.init();
+</script>  
 </body>
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">Home</button>
 </html>
