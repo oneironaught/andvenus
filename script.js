@@ -103,3 +103,18 @@ accordionButtons.forEach(button => {
         }
     });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    const offset = 200; // Adjust to match your navbar height
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth',
+    });
+  });
+});

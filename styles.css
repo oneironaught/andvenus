@@ -4,12 +4,13 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   /* Full Height for HTML and Body */
   html, body {
     height: 100%;
     width: 100%;
     margin: 0;
+    scroll-behavior: smooth;
   }
   
   /* Body Styling */
