@@ -255,9 +255,11 @@
 }
 
 .product-image {
-    width: 30%;
+    width: 60%;
     height: auto;
+    object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .view-button {
