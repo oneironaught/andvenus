@@ -319,7 +319,9 @@
   #backToTopBtn:hover {
     background-color: #fe3131;
   }
-  
+
+/* Media Queries */
+
 /* On screens 768px and below */
 @media screen and (max-width: 768px) {
   /* Prevent horizontal scrolling */
@@ -334,8 +336,7 @@
   }
 }
 
-
-  /* Adjustments for screens 768px and below */
+/* Adjustments for screens 768px and below */
 @media screen and (max-width: 768px) {
   .hero-section {
     width: 100vw; /* Ensure it matches the viewport width */
