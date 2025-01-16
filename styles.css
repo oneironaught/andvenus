@@ -48,6 +48,24 @@
   .dropdown-toggle {
     cursor: pointer;
   }
+
+  /* News Section */
+  #news {
+    padding: 3rem 0;
+}
+
+#news h2 {
+    color: white; 
+}
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Adjust height as needed */
+  text-align: center;
+}
   
   /* Carousel iframe Responsiveness */
   .carousel-item iframe {
