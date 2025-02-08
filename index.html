@@ -21,9 +21,10 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
+    <!-- Landing Section -->
+    <header id="landing">
+        <div class="overlay"></div>
+        <div class="landing-content">
             <a href="#news" class="cta-button">News</a>
             <a href="#contact" class="cta-button">Music</a>
             <a href="#about" class="cta-button">About</a>
@@ -32,7 +33,9 @@
             <a href="#merch" class="cta-button">Merch</a>
             <a href="#contact" class="cta-button">Contact</a>
         </div>
-    </section>
+    </header>       
+        
+    
 
 <!-- News Section-->    
 <section id="news" class="news-section py-5 bg-light">
@@ -44,10 +47,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title date-title">01.16.25</h5>
-                        <p class="card-text">We will be featured on the local podcast 9.56 ABV later today!<br>
+                        <p class="card-text">We will be featured on the local podcast <u><b>9.56 ABV</u></b> <a href="https://www.instagram.com/9.56abvpodcast/" class="btn btn-primary"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            later today!<br>
                             You can listen to the episode on Apple Podcasts and Spotify as soon as it becomes available.<br> 
                             Be sure to follow them and listen to our exclusive interview with the band</p>
+                            <a href="https://youtu.be/SJO_u93QO4o?si=a9NhvSxCDG2twmEj" class="btn btn-primary">Watch now on YouTube <i class="fa fa-youtube" aria-hidden="true"></i></a><br>
                             <a href="https://podcasts.apple.com/us/podcast/9-56-abv-podcast/id1537331008" class="btn btn-primary">Listen to it on Apple Podcasts <i class="fa fa-apple" aria-hidden="true"></i></a><br>
+                            <a href="https://open.spotify.com/episode/5ltjxezSvdIrbNef8C4mgM?si=3uCuLOm-TwaDde5pSi3YDg" class="btn btn-primary">Listen to it on Spotify<i class="fa fa-spotify" aria-hidden="true"></i></a><br>
                             <a href="https://www.instagram.com/9.56abvpodcast/" class="btn btn-primary">Follow 9.56 ABV on Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a>
 
                     </div>
@@ -105,16 +111,99 @@
                 and the historic Cine El Rey in McAllen, TX.<br> 
                 <br></p>
                 <h2><i class="fa-solid fa-ellipsis"></i></h2>
-                <p><u>Current Members:</u><br>
-                    Adolfo Perez- Bass/Guitar<br> 
-                    Robert Ruelas- Vocals/Guitar <br> 
-                    Fernando Cruz- Drums and vocals<br> 
-                    Nathaniel Garcia- Lead guitar<br>
-                    Elijah Cruz- Keys & Synth<br>
-                </p>
-    </div>
+                <h2>Current Members:</h2>
+<!-- Band Member Links -->
+<ul>
+    <li><a href="#" data-bs-toggle="band-member-modal" data-bs-target="#bandMember1">Adolfo Perez- Bass/Guitars</a></li>
+    <li><a href="#" data-bs-toggle="band-member-modal" data-bs-target="#bandMember2">Robert Ruelas- Vocals/Guitars</a></li>
+    <li><a href="#" data-bs-toggle="band-member-modal" data-bs-target="#bandMember3">Fernando Cruz- Drums/Vocals</a></li>
+    <li><a href="#" data-bs-toggle="band-member-modal" data-bs-target="#bandMember4">Nathaniel Garcia- Guitars/Synths</a></li>
+</ul>
 
-    <!-- Shows section -->
+<!-- Band Member Modal 1 -->
+<div class="band-member-modal fade" id="bandMember1" tabindex="-1" aria-labelledby="bandMember1Label" aria-hidden="true">
+    <div class="band-member-dialog modal-dialog modal-dialog-centered">
+        <div class="band-member-content modal-content">
+            <div class="band-member-header modal-header">
+                <h5 class="modal-title" id="bandMember1Label">Adolfo Pérez - Bass/Guitars</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="band-member-modal" aria-label="Close"></button>
+            </div>
+            <div class="band-member-body modal-body text-center">
+                <img src="assets/images/dofo_aces.jpg" alt="Band Member 1" class="img-fluid rounded">
+                <h5>Bio</h5>
+                <p>Adolfo Pérez is a talented bass player known for his deep grooves and dynamic playing style. 
+                With a strong foundation in rhythm and melody, he brings a powerful and steady presence to And Venus, 
+                blending intricate bass lines with a raw, energetic performance. His influences range from classic rock to modern alternative, 
+                giving the band’s sound a rich and versatile depth. Whether locking in with the drums or adding melodic runs, 
+                Adolfo’s bass work is a driving force behind the band’s unique sound.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Repeat for Member 2 -->
+<div class="band-member-modal fade" id="bandMember2" tabindex="-1" aria-labelledby="bandMember2Label" aria-hidden="true">
+    <div class="band-member-dialog modal-dialog modal-dialog-centered">
+        <div class="band-member-content modal-content">
+            <div class="band-member-header modal-header">
+                <h5 class="modal-title" id="bandMember2Label">Robert Ruelas - Vocals/Guitars</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="band-member-modal" aria-label="Close"></button>
+            </div>
+            <div class="band-member-body modal-body text-center">
+                <img src="assets/images/bob_SOR_studio2.jpg" alt="Band Member 2" class="img-fluid rounded">
+                <h5>Bio</h5>
+                <p>Robert Ruelas is the driving force behind And Venus, delivering powerful vocals and dynamic guitar work that shape the band’s signature sound. 
+                    With a blend of raw emotion and technical precision, he crafts melodies that resonate deeply with listeners. His ability to seamlessly transition 
+                    between hauntingly atmospheric tones and high-energy rock riffs gives And Venus a unique edge. Drawing inspiration from a wide range of influences, 
+                    Robert’s passionate performances and introspective lyrics bring a compelling depth to the band’s music, captivating audiences with every note.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Member 3 -->
+<div class="band-member-modal fade" id="bandMember3" tabindex="-1" aria-labelledby="bandMember3Label" aria-hidden="true">
+    <div class="band-member-dialog modal-dialog modal-dialog-centered">
+        <div class="band-member-content modal-content">
+            <div class="band-member-header modal-header">
+                <h5 class="modal-title" id="bandMember3Label">Fernando Cruz- Drums/Vocals</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="band-member-modal" aria-label="Close"></button>
+            </div>
+            <div class="band-member-body modal-body text-center">
+                <img src="assets/images/fer_SOR_studio2.jpg" alt="Band Member 3" class="img-fluid rounded">
+                <h5>Bio</h5>
+                <p>Fernando Cruz is the rhythmic backbone of And Venus, delivering powerful, precise, and energetic drumming that drives the band’s sound forward. 
+                    With a dynamic playing style that blends hard-hitting grooves and intricate fills, he creates a solid foundation that keeps the music both tight and expressive. 
+                    His ability to shift between explosive intensity and subtle rhythmic textures adds depth and emotion to every performance. Whether locking in with the bass or pushing the energy to new heights, 
+                    Fernando’s drumming is a force that keeps the audience moving.
+                </p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- Member 4  -->
+<div class="band-member-modal fade" id="bandMember4" tabindex="-1" aria-labelledby="bandMember4Label" aria-hidden="true">
+    <div class="band-member-dialog modal-dialog modal-dialog-centered">
+        <div class="band-member-content modal-content">
+            <div class="band-member-header modal-header">
+                <h5 class="modal-title" id="bandMember4Label">Nathaniel Garcia - Guitars/Synths</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="band-member-modal" aria-label="Close"></button>
+            </div>
+            <div class="band-member-body modal-body text-center">
+                <img src="assets/images/nate_SOR_studio.jpg" alt="Band Member 4" class="img-fluid rounded">
+                <p>Nathaniel Garcia is the sonic architect of And Venus, weaving atmospheric guitar textures, lush synth layers, and immersive soundscapes into the band’s dynamic sound. 
+                    His ability to blend melodic leads, ambient tones, and experimental effects creates a rich, cinematic feel that transports listeners to another dimension. Whether adding ethereal synth harmonies or crafting soaring guitar melodies, 
+                    Nathaniel brings a depth and complexity that elevates the band’s music. His innovative approach to sound design makes every performance an electrifying and emotional experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>    
+    </div>            
+
+<!-- Shows section -->
     <div class="content-section" id="shows" data-aos="fade-up">
         <h2>Shows</h2>
         <ul class="list-unstyled">
@@ -129,7 +218,8 @@
 <!-- Photos section -->
 <div class="content-section" id="photos" data-aos="fade-up">
     <h2>Photos</h2>
-    <div class="photos-container">
+    <button class="scroll-arrow left" onclick="scrollPhotos('left')">&#10094;</button> <!-- Left Arrow -->
+    <div class="photos-container" id="photoScroll">
         <div class="photo-container">
             <img src="assets/images/nate_aces.jpg" alt="Photo 1" class="photos" loading="lazy">
         </div>
@@ -201,13 +291,15 @@
         </div>
         <div class="photo-container">
             <img src="assets/images/bob_fer_dofo_rose.jpg" alt="Photo 24" class="photos" loading="lazy">
-        </div>   
+        </div> 
     </div>
+    <button class="scroll-arrow right" onclick="scrollPhotos('right')">&#10095;</button> <!-- Right Arrow -->  
 </div>
 
-<!-- Modal for Enlarging Photos -->
+<!-- Photo Modal -->
 <div id="photoModal" class="modal">
-    <div class="modal-content">
+    <div id="photoModalContent" class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
         <img id="enlargedPhoto" src="" alt="Enlarged Photo">
     </div>
 </div>
@@ -236,6 +328,7 @@
 </div>
 </div>
 <a href="https://andvenus.bigcartel.com" target="_blank" class="view-button">View Store</a>
+</div>
 </div>
 
 <!-- Contact Section -->

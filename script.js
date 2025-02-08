@@ -28,61 +28,60 @@ function topFunction() {
 }
 
 // Function to open the modal and display the clicked image
-  function openModal(src, x, y) {
-    const modal = document.getElementById('photoModal');
-    const modalContent = document.querySelector('.modal-content');
-    const enlargedPhoto = document.getElementById('enlargedPhoto');
-
-    enlargedPhoto.src = src;
-    
-// Display the modal
-    modal.style.display = 'flex'; // Ensure the modal is displayed
-    modal.style.opacity = '1'; // Make the modal visible
-
-// Set initial position where the image was clicked
-    modalContent.style.transformOrigin = `${x}px ${y}px`; // Set the origin based on the click position
-    modalContent.style.transform = 'scale(1)'; // Reset the scale for the image
-
-// Add the "show" class for smooth transition
-    setTimeout(() => {
-      modal.classList.add('show'); // Make the modal visible with transition
-      modalContent.classList.add('show'); // Make the image grow smoothly
-    }, 10); // Add a slight delay to ensure the display and opacity are applied before transition
-  }
-
-  // Function to close the modal
-  function closeModal() {
-    const modal = document.getElementById('photoModal');
-    const modalContent = document.querySelector('.modal-content');
-
-    modalContent.classList.remove('show'); // Hide the image smoothly
-
-    setTimeout(() => {
-      modal.style.opacity = '0'; // Fade out the modal
-      modal.style.display = 'none'; // Completely hide after transition
-    }, 300); // Delay matches the transition duration
-  }
-
-  // Add click event listeners to all images
-  const photoContainers = document.querySelectorAll('.photo-container');
-  photoContainers.forEach(container => {
-    container.addEventListener('click', function (event) {
-      const imgSrc = this.querySelector('img').src;
-      const x = event.clientX; // Get the X position of the click
-      const y = event.clientY; // Get the Y position of the click
-      openModal(imgSrc, x, y); // Pass the click position to the modal
-    });
-  });
-
-  // Close the modal when clicking outside of the image
+function openModal(src, x, y) {
   const modal = document.getElementById('photoModal');
-  modal.addEventListener('click', function (event) {
-    const modalContent = document.querySelector('.modal-content');
-    if (!modalContent.contains(event.target)) {
-      closeModal(); // Close the modal if clicked outside the image
-    }
-  });
+  const modalContent = document.getElementById('photoModalContent'); // Unique ID for modal-content
+  const enlargedPhoto = document.getElementById('enlargedPhoto');
 
+  enlargedPhoto.src = src;
+
+  // Display the modal
+  modal.style.display = 'flex';
+  modal.style.opacity = '1';
+
+  // Set initial position where the image was clicked
+  modalContent.style.transformOrigin = `${x}px ${y}px`;
+  modalContent.style.transform = 'scale(1)';
+
+  // Add the "show" class for smooth transition
+  setTimeout(() => {
+      modal.classList.add('show');
+      modalContent.classList.add('show');
+  }, 10);
+}
+
+// Function to close the modal
+function closeModal() {
+  const modal = document.getElementById('photoModal');
+  const modalContent = document.getElementById('photoModalContent');
+
+  modalContent.classList.remove('show');
+
+  setTimeout(() => {
+      modal.style.opacity = '0';
+      modal.style.display = 'none';
+  }, 300);
+}
+
+// Add click event listeners to all images
+const photoContainers = document.querySelectorAll('.photo-container');
+photoContainers.forEach(container => {
+  container.addEventListener('click', function (event) {
+      const imgSrc = this.querySelector('img').src;
+      const x = event.clientX;
+      const y = event.clientY;
+      openModal(imgSrc, x, y);
+  });
+});
+
+// Close the modal when clicking outside of the image
+const modal = document.getElementById('photoModal');
+modal.addEventListener('click', function (event) {
+  const modalContent = document.getElementById('photoModalContent');
+  if (!modalContent.contains(event.target)) {
+      closeModal();
+  }
+});
 
 // Accordion Functionality
 const accordionButtons = document.querySelectorAll('.accordion-button');
@@ -118,3 +117,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+//Band Member Modal
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('[data-bs-toggle="band-member-modal"]').forEach(function (trigger) {
+      trigger.addEventListener("click", function (event) {
+          event.preventDefault();
+          let target = this.getAttribute("data-bs-target");
+          let modal = document.querySelector(target);
+          if (modal) {
+              modal.classList.add("show");
+          }
+      });
+  });
+
+  document.querySelectorAll(".btn-close").forEach(function (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+          this.closest(".band-member-modal").classList.remove("show");
+      });
+  });
+
+  document.addEventListener("click", function (event) {
+      if (event.target.classList.contains("band-member-modal")) {
+          event.target.classList.remove("show");
+      }
+  });
+});
+
+// Scroll Photos Functionality
+function scrollPhotos(direction) {
+  const container = document.getElementById("photoScroll");
+  const scrollAmount = 300; // Adjust scroll distance per click
+
+  if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+}
