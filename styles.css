@@ -73,6 +73,14 @@ a:not(.cta-button):active {
   text-decoration: underline;
 }
 
+.custom-img {
+    max-width: 50%;      /* Shrinks image width relative to its container */
+    height: auto;        /* Maintains aspect ratio */
+    margin: 0 auto;      /* Centers the image horizontally */
+    display: block;      /* Required for margin auto to work on images */
+    border-radius: 8px;  /* Optional: adds soft corners */
+}
+
   
   /* Carousel iframe Responsiveness */
   .carousel-item iframe {
