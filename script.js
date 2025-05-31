@@ -155,3 +155,28 @@ function scrollPhotos(direction) {
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   }
 }
+
+// Sticky Navigation
+document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.getElementById('scrollNav');
+    const landing = document.getElementById('landing');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    if (!nav || !landing) return;
+
+    const landingHeight = landing.offsetHeight;
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > landingHeight - 50) {
+            nav.classList.add('fixed');
+            nav.classList.remove('show-menu'); // close menu when fixed
+        } else {
+            nav.classList.remove('fixed');
+        }
+    });
+
+    hamburgerBtn.addEventListener('click', function () {
+        nav.classList.toggle('show-menu');
+    });
+});
