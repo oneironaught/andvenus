@@ -102,7 +102,6 @@ a:not(.cta-button):active {
     bottom: auto;
     background-color: rgba(0, 0, 0, 0.85);
     padding: 15px 20px;
-    flex-wrap: nowrap;
 }
 
 .nav-left,
@@ -174,9 +173,10 @@ a:not(.cta-button):active {
 }
 
 .scroll-nav.fixed .nav-links {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* aligns to left */
+    flex-wrap: wrap;
+    justify-content: flex-start;
     position: static;
     background: none;
     padding: 0;
@@ -591,14 +591,11 @@ body.modal-open {
         flex-direction: column;
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 
     .scroll-nav .nav-links a {
@@ -633,14 +630,11 @@ body.modal-open {
         flex-direction: column;
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 
     .scroll-nav .nav-links a {
@@ -681,14 +675,11 @@ body.modal-open {
         font-size: 16px; /* Slightly smaller font size */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
 @media (max-width: 480px) {
@@ -709,14 +700,11 @@ body.modal-open {
         margin-bottom: 5px; /* Reduce spacing between buttons */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
 @media (max-width: 360px) {
@@ -737,15 +725,11 @@ body.modal-open {
         margin-bottom: 5px; /* Reduce spacing between buttons */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 5px 10px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
 @media (max-width: 320px) {
@@ -766,16 +750,11 @@ body.modal-open {
         margin-bottom: 5px; /* Reduce spacing between buttons */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        top: 0;
-        bottom: auto;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 5px 10px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
 @media (max-width: 280px) {
@@ -796,16 +775,11 @@ body.modal-open {
         margin-bottom: 5px; /* Reduce spacing between buttons */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        top: 0;
-        bottom: auto;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
 @media (max-width: 240px) {
@@ -826,13 +800,10 @@ body.modal-open {
         margin-bottom: 5px; /* Reduce spacing between buttons */
     }
 
-    .scroll-nav.fixed {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.85);
-        padding: 15px 20px;
-        align-items: flex-start; /* Align links to the left */
-        display: flex;
+    .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 20px;
+        align-items: left;
+        padding: 10px 0;
     }
 }
