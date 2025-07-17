@@ -576,78 +576,263 @@ body.modal-open {
     color: #fe3131;
   }
   
-/* Responsive Design */
-@media (max-width: 480px) {
-  .landing-content {
-    margin-top: 100px;
-    flex-direction: column;
-  }
+/* Media Queries for Responsiveness */
 
-  .nav-links a {
-    font-size: 16px;
-  }
+@media (max-width: 1080px) {
+    .scroll-nav {
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .nav-links {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: column;
+    }
 
-  .photo-container img {
-    height: 100px;
-  }
+    .scroll-nav.fixed {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-  .product-image {
-    width: 100%;
-  }
-
-  h1, h2, h3, p {
-    font-size: 90%;
-  }
+    .scroll-nav .nav-links a {
+        padding: 5px 0;
+        font-size: 10px; /* Increase font size for better readability */
+        display: block; /* Ensure links are block elements */
+    }
+   
+    .nav-right {
+        margin-top: 10px;
+    }
+    
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+    
+    .scroll-nav.fixed .hamburger {
+        display: none; /* Hide hamburger when nav is fixed */
+    }
 }
 
 @media (max-width: 768px) {
-  .landing-content {
-    margin-top: 200px;
-  }
+    .scroll-nav {
+        flex-direction: column;
+        align-items: left;
+    }
+    
+    .nav-links {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: column;
+    }
 
-  .nav-links {
-    left: 10px;
-    right: 10px;
-    width: auto;
-  }
+    .scroll-nav.fixed {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-  .carousel,
-  .carousel-item iframe {
-    max-width: 100%;
-  }
-
-  .photos-container {
-    gap: 6px;
-  }
-
-  .product-image {
-    width: 80%;
-  }
+    .scroll-nav .nav-links a {
+        padding: 10px 0;
+        font-size: 16px; /* Increase font size for better readability */
+        display: block; /* Ensure links are block elements */
+    }
+   
+    .nav-right {
+        margin-top: 10px;
+    }
+    
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+    
+    .scroll-nav.fixed .hamburger {
+        display: none; /* Hide hamburger when nav is fixed */
+    }
 }
 
-@media (max-width: 992px) {
-  .scroll-nav.fixed .nav-links {
-    gap: 30px;
-  }
+@media (max-width: 600px) {
+    .landing-content {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px; /* Spacing between buttons */
+    }
+    
+    .scroll-nav {
+        padding: 10px;
+    }
+    
+    .nav-links a {
+        font-size: 16px; /* Slightly smaller font size */
+    }
 
-  .merch-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
+    .scroll-nav.fixed {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
+@media (max-width: 480px) {
+    .scroll-nav {
+        padding: 5px;
+    }
+    
+    .nav-links a {
+        font-size: 14px; /* Further reduce font size */
+    }
+    
+    .landing-content {
+        margin-top: 10px; /* Further adjust margin for very small screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Ensure buttons are full width */
+        margin-bottom: 5px; /* Reduce spacing between buttons */
+    }
 
-@media (min-width: 1200px) {
-  .landing-content {
-    max-width: 700px;
-  }
-
-  .photo-container img {
-    height: 180px;
-  }
-
-  .product-image {
-    width: 60%;
-  }
+    .scroll-nav.fixed {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
+@media (max-width: 360px) {
+    .scroll-nav {
+        padding: 5px;
+    }
+    
+    .nav-links a {
+        font-size: 12px; /* Further reduce font size */
+    }
+    
+    .landing-content {
+        margin-top: 5px; /* Further adjust margin for very small screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Ensure buttons are full width */
+        margin-bottom: 5px; /* Reduce spacing between buttons */
+    }
 
+    .scroll-nav.fixed {
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 5px 10px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 320px) {
+    .scroll-nav {
+        padding: 5px;
+    }
+    
+    .nav-links a {
+        font-size: 12px; /* Further reduce font size */
+    }
+    
+    .landing-content {
+        margin-top: 5px; /* Further adjust margin for very small screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Ensure buttons are full width */
+        margin-bottom: 5px; /* Reduce spacing between buttons */
+    }
 
+    .scroll-nav.fixed {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 5px 10px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 280px) {
+    .scroll-nav {
+        padding: 5px;
+    }
+    
+    .nav-links a {
+        font-size: 10px; /* Further reduce font size */
+    }
+    
+    .landing-content {
+        margin-top: 5px; /* Further adjust margin for very small screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Ensure buttons are full width */
+        margin-bottom: 5px; /* Reduce spacing between buttons */
+    }
 
+    .scroll-nav.fixed {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 240px) {
+    .scroll-nav {
+        padding: 5px;
+    }
+    
+    .nav-links a {
+        font-size: 10px; /* Further reduce font size */
+    }
+    
+    .landing-content {
+        margin-top: 5px; /* Further adjust margin for very small screens */
+    }
+    
+    .cta-button {
+        width: 100%; /* Ensure buttons are full width */
+        margin-bottom: 5px; /* Reduce spacing between buttons */
+    }
+
+    .scroll-nav.fixed {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 15px 20px;
+        align-items: flex-start; /* Align links to the left */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
