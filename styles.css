@@ -625,6 +625,14 @@ body.modal-open {
   .news-section {
     padding-top: 100px; /* Adjust this to match actual nav height */
   }
+
+  .card-text {
+  font-size: 1rem; /* Adjust size as needed */
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%; /* Ensures text wraps properly */
+  }
 }
 
 
@@ -740,12 +748,20 @@ body.modal-open {
   }
 
    .card-text {
-  font-size: 1rem; /* Adjust size as needed */
-  flex-direction: column;
+  font-size: .8rem; /* Adjust size as needed */
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%; /* Ensures text wraps properly */
-   }
+  }
+
+  .custom-video {
+    width: 100%; /* Make video take full width on very small screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 320px; /* Limit max width to prevent it from being too large */
+    border-radius: 8px; /* Optional: adds soft corners */
+  }  
 }
 
 @media (max-width: 360px) {
@@ -773,13 +789,21 @@ body.modal-open {
         padding: 10px 0;
     }
 
-    .card-text {
-  font-size: 1rem; /* Adjust size as needed */
+  .card-text {
+  font-size: .8rem; /* Adjust size as needed */
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%; /* Ensures text wraps properly */
     }
+
+  .custom-video {
+    width: 100%; /* Make video take full width on very small screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 320px; /* Limit max width to prevent it from being too large */
+    border-radius: 8px; /* Optional: adds soft corners */
+  }   
 }
 
 @media (max-width: 320px) {
@@ -808,12 +832,20 @@ body.modal-open {
     }
 
   .card-text {
-  font-size: 1rem; /* Adjust size as needed */
-  flex-direction: column;
+  font-size: .8rem; /* Adjust size as needed */
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%; /* Ensures text wraps properly */
   }
+
+  .custom-video {
+    width: 100%; /* Make video take full width on very small screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 320px; /* Limit max width to prevent it from being too large */
+    border-radius: 8px; /* Optional: adds soft corners */
+  } 
 }
 
 @media (max-width: 280px) {
@@ -846,12 +878,20 @@ body.modal-open {
   }
 
    .card-text {
-  font-size: 1rem; /* Adjust size as needed */
+  font-size: .8rem; /* Adjust size as needed */
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%; /* Ensures text wraps properly */
    }
+
+  .custom-video {
+    width: 100%; /* Make video take full width on very small screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 320px; /* Limit max width to prevent it from being too large */
+    border-radius: 8px; /* Optional: adds soft corners */
+  }  
 }
 @media (max-width: 240px) {
     .scroll-nav {
@@ -882,10 +922,18 @@ body.modal-open {
   }
 
    .card-text {
-  font-size: 1rem; /* Adjust size as needed */
+  font-size: .8rem; /* Adjust size as needed */
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%; /* Ensures text wraps properly */
    }
+
+  .custom-video {
+    width: 100%; /* Make video take full width on very small screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 320px; /* Limit max width to prevent it from being too large */
+    border-radius: 8px; /* Optional: adds soft corners */
+  } 
 }
