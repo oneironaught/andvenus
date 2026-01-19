@@ -3,56 +3,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
+}
 
 /* Full Height for HTML and Body */
-  html {
+html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-  }
-  
+}
+
 /* Body Styling */
-  body {
+body {
     height: 100%;
     width: 100%;
-    margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: black;
+    background-color: #1d1d1d;
     color: white;
     line-height: 1.6;
     transition: background-color 0.3s ease-in-out;
-    background-color: #1d1d1d;
     overflow-x: hidden;
-  }
-  
+}
+
 /* General Text Links (Exclude Buttons) */
-a:not(.cta-button):link {
-  color: white;
+a:not(.cta-button, .btn):link {
+    color: white;
 }
 
 /* Visited Link */
-a:not(.cta-button):visited {
-  color: green;
+a:not(.cta-button, .btn):visited {
+    color: #00ff00;
 }
 
 /* Mouse Over Link */
-a:not(.cta-button):hover {
-  color: #fcf592;
+a:not(.cta-button, .btn):hover {
+    color: #fcf592;
 }
 
 /* Selected Link */
-a:not(.cta-button):active {
-  color: blue;
+a:not(.cta-button, .btn):active {
+    color: #0000ff;
 }
 
- /* Landing Section */
-  header#landing {
+/* Landing Section */
+header#landing {
     background: url('assets/images/hero.png');
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,32 +59,32 @@ a:not(.cta-button):active {
 
 .landing-content {
     display: flex;
-    flex-wrap: wrap; /* ✅ Allows buttons to wrap if needed */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* ✅ Adds spacing between buttons */
+    gap: 10px;
     width: 100%;
-    max-width: 600px; /* ✅ Keeps buttons centered under text */
-    margin-top: 400px; /* ✅ Adjusts position under "And Venus" */
+    max-width: 600px;
+    margin-top: 400px;
 }
 
 .cta-button:hover {
     background-color: #fcf592;
 }
-  
-  /* Fade-in Animation */
-  @keyframes fadeIn {
+
+/* Fade-in Animation */
+@keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
 
 /* Navigation Bar */
 .scroll-nav {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* light transparent black */
-    backdrop-filter: blur(5px); /* Optional: adds frosted glass effect */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,22 +109,21 @@ a:not(.cta-button):active {
 }
 
 /* Social Media Icons NavBar */
-.nav-right a[href*="twitter"] i { color: #1da1f2; }     /* Twitter blue */
-.nav-right a[href*="instagram"] i { color: #e1306c; }  /* Instagram pink */
-.nav-right a[href*="facebook"] i { color: #1877f2; }   /* Facebook blue */
-.nav-right a[href*="tiktok"] i { color: red; }     /* TikTok black */
+.nav-right a[href*="twitter"] i { color: #1da1f2; }
+.nav-right a[href*="instagram"] i { color: #e1306c; }
+.nav-right a[href*="facebook"] i { color: #1877f2; }
+.nav-right a[href*="tiktok"] i { color: red; }
 
-.nav-right a i{
-    font-size: 16px; /* Adjust size as needed */
-    scale: 1.3; /* larger icon size */
-    color: white;    /* or your preferred color */
+.nav-right a i {
+    font-size: 16px;
+    scale: 1.3;
+    color: white;
     transition: transform 0.2s ease, color 0.3s ease;
 }
 
-
 .nav-right a:hover i {
-    color: #fcf592; /* optional hover color */
-    transform: scale(2.2); /* slight grow on hover */
+    color: #fcf592;
+    transform: scale(2.2);
 }
 
 .nav-right a {
@@ -137,18 +133,9 @@ a:not(.cta-button):active {
 .hamburger {
     background: none;
     border: none;
-    color: black;
+    color: white;
     font-size: 34px;
     cursor: pointer;
-}
-
-/* Inside the dropdown/collapsible mode */
-.scroll-nav .nav-links {
-    font-size: 18px; /* or larger */
-}
-
-.scroll-nav .nav-links a {
-    font-size: 18px; /* increase as needed */
 }
 
 .nav-links {
@@ -196,340 +183,296 @@ a:not(.cta-button):active {
 }
 
 /* News Section */
-  #news {
+#news {
     padding: 3rem 0;
+    background-color: #111;
 }
 
 #news h2 {
-    color: white; 
+    color: white;
 }
 
 .news-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh; /* Adjust height as needed */
-  text-align: center;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+    width: 100%;
+}
+
+/* Music Section */
+#music h2 {
+    color: white;
 }
 
 .card-text {
-  font-size: 1rem; /* Adjust size as needed */
-  color: white; /* Ensure text is visible on dark background */
+    font-size: 1rem;
+    color: white;
 }
 
 .date-title {
-  font-size: 1.2rem; /* Slightly larger size */
-  font-weight: bold; /* Optional: Makes it stand out */
-  font-style: italic;
-  text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .custom-img {
-    max-width: 50%;      /* Shrinks image width relative to its container */
-    height: auto;        /* Maintains aspect ratio */
-    margin: 0 auto;      /* Centers the image horizontally */
-    display: block;      /* Required for margin auto to work on images */
-    border-radius: 8px;  /* Optional: adds soft corners */
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
 }
 
-  
-  /* Carousel iframe Responsiveness */
-  .carousel-item iframe {
+.custom-video {
     width: 100%;
     height: auto;
-    max-width: 500px;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Carousel iframe Responsiveness */
+.carousel-item iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 660px;
     margin: 0 auto;
     display: block;
-  }
-  
-  /* Carousel Container */
-  .carousel {
+}
+
+/* Carousel Container */
+.carousel {
     width: 100%;
-    max-width: 500px;
+    max-width: 660px;
     margin: 0 auto;
-  }
-  
-  /* Carousel Controls */
-  .carousel-control-prev, .carousel-control-next {
-    width: 5%;
-  }
-  
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Music Icons */
-  .music .fa-brands {
-    position: relative;
-    margin: 0 25px;
+}
+
+/* Music Icons */
+.music .fa-brands {
+    margin: 0 15px;
     color: #fff;
     text-decoration: none;
     transition: transform 0.3s ease;
-  }
-  
-  .music .fa-brands:hover {
+    font-size: 2rem;
+}
+
+.music .fa-brands:hover {
     transform: scale(1.2);
-    font-size: 1.5em;
     cursor: pointer;
-  }
-  
-  
-  /* Full-width Sections */
-  .content-section {
+}
+
+/* Full-width Sections */
+.content-section {
     width: 100%;
     padding: 60px 20px;
     text-align: center;
     background-color: #222;
-  }
-  
-  /* Sections Background */
+}
 
-  #news {
-    background-color: #111;
-  }
-
-  #music {
+/* Sections Background */
+#music {
     background-color: #222;
-  }
-  
-  #about {
+}
+
+#about {
     background-color: #333;
-  }
-  
-  #shows {
+}
+
+#shows {
     background-color: #444;
-  }
-  
-  #photos {
+}
+
+#photos {
     background-color: #555;
-  }
-  
-  #contact {
+    position: relative;
+    padding: 60px 20px;
+}
+
+#merch {
     background-color: #666;
-  }
-  
-  /* Heading Styles */
-  h1, h2, h3 {
+}
+
+#contact {
+    background-color: #777;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
     margin-bottom: 20px;
     color: white;
-  }
-  
-  p {
+}
+
+p {
     margin-bottom: 20px;
     color: white;
-  }
+}
 
 /* About Section */
-  ul {
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding from the list */
-    margin: 0; /* Removes any extra margin */
-  }
-
-.band-member-modal {
-  display: none;
-  position: fixed;
-  z-index: 1050;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto; /* Enables scrolling if content overflows */
+#about h2 {
+    color: white;
 }
 
-.band-member-modal.show {
-  display: flex;
-  opacity: 1;
+#about h3 {
+    color: white;
 }
 
-.band-member-content {
-  background: black;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
-  max-height: 90vh; /* Ensures the modal doesn't exceed viewport height */
-  overflow-y: auto; /* Allows scrolling if content is too long */
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
-.band-member-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#about li {
+    margin: 10px 0;
 }
 
-.band-member-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 80vh; /* Prevents content from going outside the viewport */
-  overflow-y: auto; /* Enables scrolling if needed */
+#about a {
+    color: #fcf592;
+    text-decoration: none;
 }
 
-.band-member-body img {
-  max-width: 100%;
-  height: auto;
-  max-height: 60vh; /* Adjust this to limit image size */
-  border-radius: 8px;
-  margin-bottom: 10px;
+#about a:hover {
+    text-decoration: underline;
 }
 
-.band-member-body p {
-  max-width: 90%;
-  font-size: 1rem;
-  color: white;
-  padding: 10px;
-  text-align: center;
+/* Shows Section */
+#shows h2 {
+    color: white;
 }
 
-  
-/* ✅ Ensures photos stay in a horizontal scrollable row */
+/* Photo Gallery */
+#photos h2 {
+    color: white;
+}
+
 .photos-container {
-  display: flex;
-  flex-wrap: nowrap; /* ✅ Prevents images from wrapping */
-  gap: 10px; /* ✅ Adds spacing between images */
-  padding: 10px;
-  overflow-x: auto; /* ✅ Enables horizontal scrolling */
-  white-space: nowrap; /* ✅ Prevents line breaks */
-  align-items: center;
-  position: relative; /* ✅ Needed for arrows */
-  scroll-behavior: smooth; /* ✅ Smooth scrolling */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 20px 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* ✅ Individual Photo Styling */
-.photo-container {
-  flex: 0 0 auto; /* ✅ Ensures all images stay in a row */
-  cursor: pointer;
-}
-
-/* ✅ Keep image size consistent */
-.photo-container img {
-  width: auto;
-  height: 150px; /* ✅ Adjust height as needed */
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-/* ✅ Hover effect */
-.photo-container:hover img {
-  transform: scale(1.05);
-}
-
-/* ✅ Hide scrollbar but keep scrolling */
 .photos-container::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-/* ✅ Left & Right Scroll Arrows */
+.photo-container {
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.photo-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Scroll Arrows */
 .scroll-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 50%;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .scroll-arrow.left {
-  left: 10px;
+    left: 10px;
 }
 
 .scroll-arrow.right {
-  right: 10px;
+    right: 10px;
 }
-  
-/* ✅ Ensure modal covers the entire screen and is centered */
-/* ✅ Ensure the modal covers the screen and stays centered */
+
+/* Photo Modal */
 #photoModal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  overflow: hidden; /* ✅ Prevents scrolling */
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
 }
 
-/* ✅ Ensure modal appears properly when triggered */
 #photoModal.show {
-  display: flex;
-  opacity: 1;
+    display: flex;
 }
 
-/* ✅ Fixes inconsistent image sizes and keeps modal centered */
 #photoModalContent {
-  width: 80vw; /* ✅ Ensures consistent width */
-  height: auto;
-  max-width: 800px; /* ✅ Prevents excessive stretching */
-  max-height: 90vh; /* ✅ Ensures it doesn’t go off-screen */
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden; /* ✅ Prevents images from breaking out */
-  position: relative;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
 }
 
-/* ✅ Ensures images stay centered and fully visible */
 #photoModalContent img {
-  width: 100%;
-  height: auto;
-  max-height: 90vh; /* ✅ Ensures image fits within viewport */
-  object-fit: contain;
-  border-radius: 8px;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
-/* ✅ Prevent background scrolling when modal is open */
-body.modal-open {
-  overflow: hidden;
-}
-
-/* ✅ Close button styling (optional improvement) */
 #photoModal .close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 5px;
+    z-index: 10000;
 }
- 
+
+body.modal-open {
+    overflow: hidden;
+}
+
 /* Merch Section */
-  .merch-container {
+#merch h2 {
+    color: white;
+}
+
+.merch-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+    gap: 30px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product-card {
+    background: rgba(255, 255, 255, 0.1);
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -537,17 +480,21 @@ body.modal-open {
 }
 
 .product-image {
-    width: 60%;
-    height: auto;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
 .view-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
+    margin-top: 15px;
+    padding: 12px 24px;
     background-color: #333;
     color: white;
     border-radius: 5px;
@@ -557,38 +504,58 @@ body.modal-open {
 
 .view-button:hover {
     background-color: #555;
+    text-decoration: none;
+    color: white;
 }
 
+/* Contact Section */
+#contact h2 {
+    color: white;
+}
 
-  /* Footer Styling */
-  .footer {
+/* Footer Styling */
+.footer {
     background-color: black;
     color: #fcf592;
-    padding: 10px 0;
-    padding-top: 2%;
+    padding: 30px 0;
     text-align: center;
     width: 100%;
-  }
-  
-  /* Social Icons in Footer */
-  .social-icons a {
-    margin: 0 10px;
+}
+
+/* Social Icons in Footer */
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
     color: #fcf592;
     text-decoration: none;
     font-size: 24px;
-  }
-  
-  .social-icons a:hover {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
     color: #fe3131;
-  }
-  
+    transform: scale(1.2);
+}
+
+.footer a {
+    color: #fcf592;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 /* Media Queries for Responsiveness */
-
 @media (max-width: 1080px) {
-
     .scroll-nav {
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
+        padding: 15px;
     }
     
     .nav-links {
@@ -596,19 +563,20 @@ body.modal-open {
         background-color: transparent;
         padding: 0;
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .scroll-nav.fixed .nav-links {
         flex-direction: row;
         gap: 20px;
-        align-items: left;
+        align-items: center;
         padding: 10px 0;
     }
 
     .scroll-nav .nav-links a {
         padding: 5px 0;
-        font-size: 10px; /* Increase font size for better readability */
-        display: block; /* Ensure links are block elements */
+        font-size: 14px;
+        display: block;
     }
    
     .nav-right {
@@ -616,81 +584,67 @@ body.modal-open {
     }
     
     .hamburger {
-        display: block; /* Show hamburger on smaller screens */
+        display: block;
     }
     
     .scroll-nav.fixed .hamburger {
-        display: none; /* Hide hamburger when nav is fixed */
+        display: none;
     }
 
-  .news-section {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
+    .news-section {
+        padding-top: 80px;
+    }
 
-  .card-text {
-  font-size: 1rem; /* Adjust size as needed */
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%; /* Ensures text wraps properly */
-  }
+    .card-text {
+        font-size: 1rem;
+    }
+    
+    .merch-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    
 }
 
-
 @media (max-width: 768px) {
-
     .scroll-nav {
-        flex-direction: column;
-        align-items: left;
+        padding: 10px;
     }
     
-    .nav-links {
-        position: static;
-        background-color: transparent;
-        padding: 0;
-        flex-direction: column;
-    }
-
-    .scroll-nav.fixed .nav-links {
-        flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
-    }
-
     .scroll-nav .nav-links a {
-        padding: 10px 0;
-        font-size: 16px; /* Increase font size for better readability */
-        display: block; /* Ensure links are block elements */
-    }
-   
-    .nav-right {
-        margin-top: 10px;
+        font-size: 16px;
     }
     
-    .hamburger {
-        display: block; /* Show hamburger on smaller screens */
+    .landing-content {
+        margin-top: 300px;
     }
     
-    .scroll-nav.fixed .hamburger {
-        display: none; /* Hide hamburger when nav is fixed */
+    .photo-container img {
+        width: 150px;
+        height: 120px;
     }
-
-    #news {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
+    
+    .merch-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
 }
 
 @media (max-width: 600px) {
-
     .landing-content {
-        flex-direction: column; /* Stack buttons vertically */
-        margin-top: 20px; /* Adjust margin for smaller screens */
+        flex-direction: column;
+        margin-top: 250px;
+        gap: 15px;
     }
     
     .cta-button {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 10px; /* Spacing between buttons */
+        width: 100%;
+        margin-bottom: 10px;
     }
     
     .scroll-nav {
@@ -698,74 +652,98 @@ body.modal-open {
     }
     
     .nav-links a {
-        font-size: 16px; /* Slightly smaller font size */
+        font-size: 16px;
     }
 
     .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        gap: 20px;
-        align-items: left;
+        gap: 15px;
         padding: 10px 0;
     }
 
     .news-section {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
+        padding-top: 80px;
+    }
 
-  .card-text {
-  font-size: 1rem; /* Adjust size as needed */
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%; /* Ensures text wraps properly */
-  }
+    .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .date-title {
+        font-size: 1.1rem;
+    }
+    
+    .photo-container img {
+        width: 120px;
+        height: 100px;
+    }
+    
+    .merch-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
 }
 
 @media (max-width: 480px) {
-
     .scroll-nav {
-        padding: 5px;
+        padding: 8px;
     }
     
     .nav-links a {
-        font-size: 14px; /* Further reduce font size */
+        font-size: 14px;
     }
     
     .landing-content {
-        margin-top: 10px; /* Further adjust margin for very small screens */
+        margin-top: 200px;
     }
     
     .cta-button {
-        width: 100%; /* Ensure buttons are full width */
-        margin-bottom: 5px; /* Reduce spacing between buttons */
+        width: 100%;
+        margin-bottom: 8px;
+        padding: 12px;
+        font-size: 14px;
     }
 
     .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
+        gap: 10px;
+        padding: 8px 0;
     }
 
-   .news-section {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
+    .news-section {
+        padding-top: 70px;
+    }
 
-   .card-text {
-  font-size: .8rem; /* Adjust size as needed */
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; /* Ensures text wraps properly */
-  }
+    .card-text {
+        font-size: 0.85rem;
+    }
 
-  .custom-video {
-    width: 100%; /* Make video take full width on very small screens */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 320px; /* Limit max width to prevent it from being too large */
-    border-radius: 8px; /* Optional: adds soft corners */
-  }  
+    .photo-container img {
+        width: 100px;
+        height: 80px;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+    
+    .footer {
+        padding: 20px 0;
+    }
 }
 
 @media (max-width: 360px) {
@@ -774,171 +752,78 @@ body.modal-open {
     }
     
     .nav-links a {
-        font-size: 12px; /* Further reduce font size */
+        font-size: 12px;
     }
     
     .landing-content {
-        margin-top: 5px; /* Further adjust margin for very small screens */
+        margin-top: 150px;
+        gap: 10px;
     }
     
     .cta-button {
-        width: 100%; /* Ensure buttons are full width */
-        margin-bottom: 5px; /* Reduce spacing between buttons */
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 10px;
+        font-size: 12px;
     }
 
     .scroll-nav.fixed .nav-links {
         flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
+        gap: 8px;
+        padding: 5px 0;
     }
 
-  .card-text {
-  font-size: .8rem; /* Adjust size as needed */
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; /* Ensures text wraps properly */
+    .card-text {
+        font-size: 0.8rem;
     }
 
-  .custom-video {
-    width: 100%; /* Make video take full width on very small screens */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 320px; /* Limit max width to prevent it from being too large */
-    border-radius: 8px; /* Optional: adds soft corners */
-  }   
+    .photo-container img {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+    
+    .social-icons a {
+        font-size: 16px;
+        margin: 0 6px;
+    }
 }
 
+/* Additional fixes for very small screens */
 @media (max-width: 320px) {
-    .scroll-nav {
-        padding: 5px;
-    }
-    
-    .nav-links a {
-        font-size: 12px; /* Further reduce font size */
-    }
-    
     .landing-content {
-        margin-top: 5px; /* Further adjust margin for very small screens */
+        margin-top: 120px;
     }
     
-    .cta-button {
-        width: 100%; /* Ensure buttons are full width */
-        margin-bottom: 5px; /* Reduce spacing between buttons */
+    .photo-container img {
+        width: 70px;
+        height: 50px;
     }
-
-    .scroll-nav.fixed .nav-links {
-        flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
+    
+    .product-image {
+        height: 120px;
     }
-
-  .card-text {
-  font-size: .8rem; /* Adjust size as needed */
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; /* Ensures text wraps properly */
-  }
-
-  .custom-video {
-    width: 100%; /* Make video take full width on very small screens */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 320px; /* Limit max width to prevent it from being too large */
-    border-radius: 8px; /* Optional: adds soft corners */
-  } 
 }
 
 @media (max-width: 280px) {
-    .scroll-nav {
-        padding: 5px;
-    }
-    
-    .nav-links a {
-        font-size: 10px; /* Further reduce font size */
-    }
-    
     .landing-content {
-        margin-top: 5px; /* Further adjust margin for very small screens */
+        margin-top: 100px;
     }
     
-    .cta-button {
-        width: 100%; /* Ensure buttons are full width */
-        margin-bottom: 5px; /* Reduce spacing between buttons */
-    }
-
-    .scroll-nav.fixed .nav-links {
-        flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
-    }
-
-    .news-section {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
-
-   .card-text {
-  font-size: .8rem; /* Adjust size as needed */
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; /* Ensures text wraps properly */
-   }
-
-  .custom-video {
-    width: 100%; /* Make video take full width on very small screens */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 320px; /* Limit max width to prevent it from being too large */
-    border-radius: 8px; /* Optional: adds soft corners */
-  }  
-}
-@media (max-width: 240px) {
-
-    .scroll-nav {
-        padding: 5px;
+    .photo-container img {
+        width: 60px;
+        height: 40px;
     }
     
-    .nav-links a {
-        font-size: 10px; /* Further reduce font size */
+    .product-image {
+        height: 100px;
     }
     
-    .landing-content {
-        margin-top: 5px; /* Further adjust margin for very small screens */
+    .social-icons a {
+        font-size: 14px;
+        margin: 0 4px;
     }
-    
-    .cta-button {
-        width: 100%; /* Ensure buttons are full width */
-        margin-bottom: 5px; /* Reduce spacing between buttons */
-    }
-
-    .scroll-nav.fixed .nav-links {
-        flex-direction: row;
-        gap: 20px;
-        align-items: left;
-        padding: 10px 0;
-    }
-    .news-section {
-    padding-top: 100px; /* Adjust this to match actual nav height */
-  }
-
-   .card-text {
-  font-size: .8rem; /* Adjust size as needed */
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; /* Ensures text wraps properly */
-   }
-
-  .custom-video {
-    width: 100%; /* Make video take full width on very small screens */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 320px; /* Limit max width to prevent it from being too large */
-    border-radius: 8px; /* Optional: adds soft corners */
-  } 
 }

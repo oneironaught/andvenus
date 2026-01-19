@@ -1,182 +1,307 @@
 // AOS Initialization (Animate on Scroll)
-AOS.init();
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    }
+});
 
 // Toggle Mobile Navigation Menu
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
-}
-
-// Back to Top Button Functionality
-const backToTopBtn = document.getElementById('backToTopBtn');
-
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = 'block';
-    } else {
-        backToTopBtn.style.display = 'none';
+    const nav = document.getElementById('scrollNav');
+    if (nav) {
+        nav.classList.toggle('show-menu');
     }
 }
 
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+// Back to Top Button Functionality
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }
 
 // Function to open the modal and display the clicked image
 function openModal(src, x, y) {
-  const modal = document.getElementById('photoModal');
-  const modalContent = document.getElementById('photoModalContent'); // Unique ID for modal-content
-  const enlargedPhoto = document.getElementById('enlargedPhoto');
+    const modal = document.getElementById('photoModal');
+    const enlargedPhoto = document.getElementById('enlargedPhoto');
 
-  enlargedPhoto.src = src;
+    if (!modal || !enlargedPhoto) return;
 
-  // Display the modal
-  modal.style.display = 'flex';
-  modal.style.opacity = '1';
-
-  // Set initial position where the image was clicked
-  modalContent.style.transformOrigin = `${x}px ${y}px`;
-  modalContent.style.transform = 'scale(1)';
-
-  // Add the "show" class for smooth transition
-  setTimeout(() => {
-      modal.classList.add('show');
-      modalContent.classList.add('show');
-  }, 10);
+    enlargedPhoto.src = src;
+    
+    // Prevent background scrolling
+    document.body.classList.add('modal-open');
+    
+    // Display the modal with fade-in effect
+    modal.classList.add('show');
+    
+    // Focus trap for accessibility
+    modal.focus();
 }
 
 // Function to close the modal
 function closeModal() {
-  const modal = document.getElementById('photoModal');
-  const modalContent = document.getElementById('photoModalContent');
-
-  modalContent.classList.remove('show');
-
-  setTimeout(() => {
-      modal.style.opacity = '0';
-      modal.style.display = 'none';
-  }, 300);
+    const modal = document.getElementById('photoModal');
+    
+    if (!modal) return;
+    
+    modal.classList.remove('show');
+    
+    // Re-enable background scrolling
+    document.body.classList.remove('modal-open');
 }
 
-// Add click event listeners to all images
-const photoContainers = document.querySelectorAll('.photo-container');
-photoContainers.forEach(container => {
-  container.addEventListener('click', function (event) {
-      const imgSrc = this.querySelector('img').src;
-      const x = event.clientX;
-      const y = event.clientY;
-      openModal(imgSrc, x, y);
-  });
-});
-
-// Close the modal when clicking outside of the image
-const modal = document.getElementById('photoModal');
-modal.addEventListener('click', function (event) {
-  const modalContent = document.getElementById('photoModalContent');
-  if (!modalContent.contains(event.target)) {
-      closeModal();
-  }
-});
-
-// Accordion Functionality
-const accordionButtons = document.querySelectorAll('.accordion-button');
-
-accordionButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionItem = button.parentElement;
-        const content = accordionItem.querySelector('.accordion-content');
-
-        // Toggle the active class
-        accordionItem.classList.toggle('active');
-
-        // Check if the accordion item is active, adjust maxHeight accordingly
-        if (accordionItem.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + 'px'; // Expand content
-        } else {
-            content.style.maxHeight = 0; // Collapse content
-        }
+// Initialize photo gallery functionality
+function initPhotoGallery() {
+    // Add click event listeners to all images
+    const photoContainers = document.querySelectorAll('.photo-container');
+    photoContainers.forEach(container => {
+        container.addEventListener('click', function(event) {
+            const img = this.querySelector('img');
+            if (img) {
+                const imgSrc = img.src;
+                const rect = img.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+                openModal(imgSrc, x, y);
+            }
+        });
+        
+        // Add keyboard accessibility
+        container.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const img = this.querySelector('img');
+                if (img) {
+                    openModal(img.src, 0, 0);
+                }
+            }
+        });
+        
+        // Make containers focusable
+        container.setAttribute('tabindex', '0');
+        container.setAttribute('role', 'button');
     });
-});
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const target = document.getElementById(targetId);
-    const offset = 200; // Adjust to match your navbar height
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+    // Close the modal when clicking outside of the image
+    const modal = document.getElementById('photoModal');
+    if (modal) {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close with Escape key
+        modal.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    }
 
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth',
+    // Close button functionality
+    const closeBtn = document.querySelector('#photoModal .close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+}
+
+// Accordion Functionality (if used)
+function initAccordion() {
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const accordionItem = this.parentElement;
+            const content = accordionItem.querySelector('.accordion-content');
+            
+            if (!content) return;
+            
+            // Toggle the active class
+            accordionItem.classList.toggle('active');
+            
+            // Check if the accordion item is active, adjust maxHeight accordingly
+            if (accordionItem.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0';
+            }
+        });
     });
-  });
-});
+}
 
-//Band Member Modal
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('[data-bs-toggle="band-member-modal"]').forEach(function (trigger) {
-      trigger.addEventListener("click", function (event) {
-          event.preventDefault();
-          let target = this.getAttribute("data-bs-target");
-          let modal = document.querySelector(target);
-          if (modal) {
-              modal.classList.add("show");
-          }
-      });
-  });
+// Smooth scrolling for anchor links
+function initSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            
+            if (target) {
+                const offset = 80; // Adjust to match your navbar height
+                const targetPosition = target.offsetTop - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const nav = document.getElementById('scrollNav');
+                if (nav && nav.classList.contains('show-menu')) {
+                    nav.classList.remove('show-menu');
+                }
+            }
+        });
+    });
+}
 
-  document.querySelectorAll(".btn-close").forEach(function (closeBtn) {
-      closeBtn.addEventListener("click", function () {
-          this.closest(".band-member-modal").classList.remove("show");
-      });
-  });
+// Band Member Modal
+function initBandMemberModals() {
+    // Handle modal triggers
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function(trigger) {
+        trigger.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("data-bs-target");
+            const modal = document.querySelector(targetId);
+            
+            if (modal) {
+                // Show modal using Bootstrap's modal method if available
+                if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                    const bsModal = new bootstrap.Modal(modal);
+                    bsModal.show();
+                } else {
+                    // Fallback for manual modal handling
+                    modal.classList.add("show");
+                    modal.style.display = "block";
+                    document.body.classList.add('modal-open');
+                }
+            }
+        });
+    });
 
-  document.addEventListener("click", function (event) {
-      if (event.target.classList.contains("band-member-modal")) {
-          event.target.classList.remove("show");
-      }
-  });
-});
+    // Handle modal close buttons
+    document.querySelectorAll(".btn-close, [data-bs-dismiss='modal']").forEach(function(closeBtn) {
+        closeBtn.addEventListener("click", function() {
+            const modal = this.closest(".modal");
+            if (modal) {
+                if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                    const bsModal = bootstrap.Modal.getInstance(modal);
+                    if (bsModal) bsModal.hide();
+                } else {
+                    modal.classList.remove("show");
+                    modal.style.display = "none";
+                    document.body.classList.remove('modal-open');
+                }
+            }
+        });
+    });
+
+    // Close modals when clicking outside
+    document.querySelectorAll(".modal").forEach(function(modal) {
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                    const bsModal = bootstrap.Modal.getInstance(modal);
+                    if (bsModal) bsModal.hide();
+                } else {
+                    modal.classList.remove("show");
+                    modal.style.display = "none";
+                    document.body.classList.remove('modal-open');
+                }
+            }
+        });
+    });
+}
 
 // Scroll Photos Functionality
 function scrollPhotos(direction) {
-  const container = document.getElementById("photoScroll");
-  const scrollAmount = 300; // Adjust scroll distance per click
-
-  if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  }
+    const container = document.getElementById("photoScroll");
+    
+    if (!container) return;
+    
+    const scrollAmount = 300;
+    
+    if (direction === "left") {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
 }
 
 // Sticky Navigation
-document.addEventListener('DOMContentLoaded', function () {
+function initStickyNavigation() {
     const nav = document.getElementById('scrollNav');
     const landing = document.getElementById('landing');
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navLinks = document.getElementById('navLinks');
-
+    
     if (!nav || !landing) return;
-
+    
     const landingHeight = landing.offsetHeight;
-
-    window.addEventListener('scroll', function () {
+    
+    window.addEventListener('scroll', function() {
         if (window.scrollY > landingHeight - 50) {
             nav.classList.add('fixed');
-            nav.classList.remove('show-menu'); // close menu when fixed
         } else {
             nav.classList.remove('fixed');
         }
     });
+    
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function() {
+            nav.classList.toggle('show-menu');
+        });
+    }
+}
 
-    hamburgerBtn.addEventListener('click', function () {
-        nav.classList.toggle('show-menu');
-    });
+// Initialize all functions when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initBackToTop();
+    initPhotoGallery();
+    initAccordion();
+    initSmoothScrolling();
+    initBandMemberModals();
+    initStickyNavigation();
+    
+    // Add keyboard accessibility to hamburger menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMenu();
+            }
+        });
+    }
+});
+
+// Handle window resize for responsive adjustments
+window.addEventListener('resize', function() {
+    // Close mobile menu on resize if open
+    const nav = document.getElementById('scrollNav');
+    if (nav && window.innerWidth > 768 && nav.classList.contains('show-menu')) {
+        nav.classList.remove('show-menu');
+    }
 });
