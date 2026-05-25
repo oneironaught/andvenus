@@ -1,629 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>And Venus</title>
-    <!-- Linking CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- Linking Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Linking Bootstrap 5.3.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- Calendly -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" defer></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- AOS Animation Library -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-</head>
+    <title>And Venus | Official Website</title>
 
-<body>
-    <!-- Landing Section -->
-    <header id="landing">
-        <div class="overlay"></div>
-        <!-- Navigation Bar -->     
-        <nav id="scrollNav" class="scroll-nav">
-            <div class="nav-left">
-                <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Toggle navigation">
-                    ☰
-                </button>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="#news" class="nav-link">News</a>
-                <a href="#music" class="nav-link">Music</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#shows" class="nav-link">Shows</a>
-                <a href="#photos" class="nav-link">Photos</a>
-                <a href="#merch" class="nav-link">Merch</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
+    <meta
+      name="description"
+      content="The official website of And Venus. It's only in the storm where we discover who we are."
+    />
 
-            <div class="nav-right">
-                <a href="https://instagram.com/andvenus" target="_blank" aria-label="Instagram" class="nav-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/andvenus" target="_blank" aria-label="Facebook" class="nav-link">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.tiktok.com/@and.venus" target="_blank" aria-label="TikTok" class="nav-link">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://twitter.com/andvenus" target="_blank" aria-label="Twitter" class="nav-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </nav>
-    </header> 
-        
-    <!-- News Section-->    
-    <section id="news" class="news-section py-5 bg-dark text-white">
+    <meta property="og:title" content="And Venus | Official Website" />
+    <meta
+      property="og:description"
+      content="A signal beneath the static. Shapes move through the dark."
+    />
+    <meta property="og:image" content="images/hero-band.jpg" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="noise"></div>
+    <div class="cosmic-bg"></div>
+
+    <header class="site-header" id="siteHeader">
+      <a href="#home" class="logo">And Venus</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#news">News</a>
+        <a href="#music">Music</a>
+        <a href="#rumors">Rumors</a>
+        <a href="#rituals">Rituals</a>
+        <a href="#visions">Visions</a>
+        <a href="#relics">Relics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero section" id="home">
+        <div class="hero-orb"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">
+            It's only in the storm where we discover who we are.
+          </p>
+
+          <h1>And Venus</h1>
+
+          <p class="hero-text">Signals/Static</p>
+
+          <div class="hero-actions">
+            <a href="#music" class="btn btn-primary">Listen Now</a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span></span>
+          Scroll
+        </div>
+      </section>
+
+      <!-- MANIFESTO -->
+      <section class="manifesto section">
+        <div class="container narrow reveal">
+          <h2>Id sumus quod quaerimus.</h2>
+
+          <p>Incoming transmission...</p>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section class="section" id="news">
         <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Latest News</h2>
-            <div class="row g-4">
-                <!-- News Item 1 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="card bg-secondary text-white h-100">
-                        <div class="card-body">
-                            <h5 class="card-title date-title">12.10.25</h5>
-                            <p class="card-text">We are excited to announce that we will be sharing the stage with At The Drive-In and Sparta's, Jim Ward @ The Gremlin in McAllen, TX.</p>
-                            <img src="assets/images/Jim_Ward_Flyer.jpg" class="card-img-top custom-img" alt="Jim Ward Flyer">
-                        </div>
-                    </div>
-                </div>
+          <div class="section-heading reveal">
+            <p class="eyebrow">News</p>
+            <h2>Latest News</h2>
+            <p>
+              Fragments received out of sequence. Some are announcements. Some
+              are not.
+            </p>
+          </div>
 
-                <!-- News Item 2 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="card bg-secondary text-white h-100">
-                        <div class="card-body">
-                            <h5 class="card-title date-title">07.17.25</h5>
-                            <p class="card-text">And Venus returns to The Flying Walrus on August 8th</p>
-                            <div class="ratio ratio-16x9 mb-3">
-                                <video class="custom-video" controls>
-                                    <source src="assets/videos/Walrus_Promo.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <p class="card-text mt-2">Music by Honeybunny</p>
-                            <img src="assets/images/AndVenus_Walrus_08.08.25.jpg" class="card-img-top custom-img" alt="The Flying Walrus">
-                        </div>
-                    </div>
-                </div>
+          <div class="cards-grid">
+            <article class="news-card reveal">
+              <p class="card-date">News 05.27.25</p>
+              <h3>Rock on the Moon Festival</h3>
+              <p>
+                The date appeared first. The rest followed later. Those who were
+                there remember different things.
+              </p>
+              <a href="#rituals" class="text-link">View Rituals</a>
+            </article>
 
-                <!-- News Item 3 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="card bg-secondary text-white h-100">
-                        <div class="card-body">
-                            <h5 class="card-title date-title">05.27.25</h5>
-                            <p class="card-text">We will be playing at the annual festival "Rock on the Moon"</p>
-                            <img src="assets/images/rock_on_the_moon.jpeg" class="card-img-top custom-img" alt="Rock on the Moon Festival">
-                        </div>
-                    </div>
-                </div>
+            <article class="news-card reveal">
+              <p class="card-date">Transmission 01.16.25</p>
+              <h3>956 ABV Podcast Appearance</h3>
+              <p>
+                Voices were recorded. Some answers were given. Others remained
+                beneath the surface.
+              </p>
+              <a href="#contact" class="text-link">Follow the Signal</a>
+            </article>
 
-                <!-- News Item 4 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="card bg-secondary text-white h-100">
-                        <div class="card-body">
-                            <h5 class="card-title date-title">01.16.25</h5>
-                            <p class="card-text">We will be featured on the local podcast later today! 
-                                <a href="https://www.instagram.com/9.56abvpodcast/" class="btn btn-primary">9.56 ABV <i class="fab fa-instagram" aria-hidden="true"></i></a>
-                            </p>
-                            <p>You can listen to the episode on Apple Podcasts and Spotify as soon as it becomes available.<br>
-                               Be sure to follow them and listen to our exclusive interview with the band</p>
-                            <img src="assets/images/956_abv_podcast.jpg" class="card-img-top custom-img" alt="(9.56 ABV Podcast)">
-                            
-                            <div class="mt-3">
-                                <a href="https://youtu.be/SJO_u93QO4o?si=a9NhvSxCDG2twmEj" class="btn btn-danger d-block mb-2">
-                                    Watch now on YouTube <i class="fab fa-youtube" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://podcasts.apple.com/us/podcast/9-56-abv-podcast/id1537331008" class="btn btn-dark d-block mb-2">
-                                    Listen on Apple Podcasts <i class="fab fa-apple" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://open.spotify.com/episode/5ltjxezSvdIrbNef8C4mgM?si=3uCuLOm-TwaDde5pSi3YDg" class="btn btn-success d-block mb-2">
-                                    Listen on Spotify <i class="fab fa-spotify" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://www.instagram.com/9.56abvpodcast/" class="btn btn-info d-block">
-                                    Follow 9.56 ABV <i class="fab fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Item 5 -->
-                <div class="col-lg-6 col-md-12 mx-auto">
-                    <div class="card bg-secondary text-white">
-                        <div class="card-body">
-                            <h5 class="card-title date-title">12.01.24</h5>
-                            <p class="card-text">We're writing again! Look out for new music soon!</p>
-                            <a href="#music" class="btn btn-primary">Listen Now<br><i class="fa-solid fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <article class="news-card reveal">
+              <p class="card-date">Archive</p>
+              <h3>New Music Incoming</h3>
+              <p>
+                Something has been forming in the walls. It has not yet chosen a
+                name.
+              </p>
+              <a href="#music" class="text-link">Listen Now</a>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Music Section -->
-    <section class="content-section" id="music" data-aos="fade-up">
+      <!-- MUSIC -->
+      <section class="section dark-panel" id="music">
         <div class="container">
-            <h2 class="text-center mb-4">Listen to Our Music</h2>
-            <div class="text-center mb-4">
-                <i class="fa-solid fa-headphones fa-bounce fs-1"></i>
-            </div>
-            
-            <div id="musicCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="ratio ratio-1x1">
-                            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
-                                    frameborder="0" 
-                                    style="border-radius:10px;" 
-                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
-                                    src="https://embed.music.apple.com/us/album/incidents/1817204223">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="text-center mb-4">Available now on all streaming platforms</h3>
-            
-            <div class="music text-center">
-                <a href="https://music.apple.com/us/artist/and-venus/1335594997" 
-                   class="fa-brands fa-apple fa-bounce fs-1 mx-3 text-white" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Apple Music">
-                </a>
-                <a href="https://open.spotify.com/artist/4CPEqoLO6sSiU3TS6Gygc0?si=DJeMJYygSZWNXSa_dRUoSQ" 
-                   class="fa-brands fa-spotify fa-bounce fs-1 mx-3" 
-                   style="color: #16cb34" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Spotify">
-                </a>
-                <a href="https://music.youtube.com/channel/UCLuexyorbTD9i0HeOmt255g?si=V9bC-esYRPhwxDxa" 
-                   class="fa-brands fa-youtube fa-bounce fs-1 mx-3" 
-                   style="color: #fb5209" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="YouTube Music">
-                </a>
-                <a href="https://andvenus.bandcamp.com" 
-                   class="fa-brands fa-bandcamp fa-bounce fs-1 mx-3" 
-                   style="color: #6987ba" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Bandcamp">
-                </a>
-                <a href="https://music.amazon.com/artists/B078Z3BBM1/and-venus?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fMGUNX0US2teP1WXJP2mvrvCc" 
-                   class="fa-brands fa-amazon fa-bounce fs-1 mx-3" 
-                   style="color: #ffba44" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Amazon Music">
-                </a>
-                <a href="https://deezer.page.link/JejWLxyXcjMMTv8YA" 
-                   class="fa-brands fa-deezer fa-bounce fs-1 mx-3" 
-                   style="color: #8f69ba" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Deezer">
-                </a>
-            </div>
-        </div>
-    </section>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Sonic Artifacts</p>
+            <h2>Music</h2>
+            <p>
+              Recorded evidence. Unmarked doors. Familiar voices in unfamiliar
+              rooms.
+            </p>
+          </div>
 
-    <!-- About Section -->
-    <section class="content-section" id="about" data-aos="fade-up">
+          <div class="music-layout">
+            <div class="music-card large reveal">
+              <div class="album-art">
+                <div class="album-symbol">♀</div>
+              </div>
+
+              <div>
+                <p class="eyebrow">Featured Release</p>
+                <h3>And Venus Archive</h3>
+                <p>
+                  Begin anywhere. The sequence is not important until it is.
+                </p>
+
+                <div class="music-links">
+                  <a href="#" target="_blank" rel="noopener">Spotify</a>
+                  <a href="#" target="_blank" rel="noopener">Apple Music</a>
+                  <a href="#" target="_blank" rel="noopener">YouTube</a>
+                  <a href="#" target="_blank" rel="noopener">Bandcamp</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="embed-card reveal">
+              <h3>Embedded Player</h3>
+              <p>Arbitrary sounds</p>
+
+              <div class="fake-embed">
+                <p>Transmission Pending</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rumors -->
+      <section class="section" id="rumors">
         <div class="container">
-            <h2 class="text-center mb-4">About</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="text-center">
-                        And Venus is an up and coming band hailing from the vibrant music scene of The Rio Grand Valley
-                        with influences ranging from classic rock to jazz. They have crafted a sound that is both nostalgic and fresh.
-                    </p>
-                    
-                    <p class="text-center">
-                        With music that is characterized by catchy guitar riffs, memorable lyrics, and a driving rhythm section,
-                        it never fails to get the crowd moving. Their songs often explore themes of 
-                        love, loss, and the human condition, resonating deeply with their listeners.
-                    </p>
-                    
-                    <p class="text-center">
-                        Since their formation in 2007, And Venus has been steadily building a dedicated fanbase through their electrifying 
-                        live performances and engaging online presence. They have performed at the monumental Emos in Austin, TX 
-                        and the historic Cine El Rey in McAllen, TX.
-                    </p>
-                    
-                    <div class="text-center my-4">
-                        <i class="fa-solid fa-ellipsis fs-3" style="color: white;"></i>
-                    </div>
-
-        <!-- Members Section -->
-                    <h3 class="text-center mb-4" id="members">Current Members:</h3>
-                    
-                    <div class="row text-center">
-                        <div class="col-md-6 col-lg-3 mb-3">
-                            <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#bandMember1">
-                                Adolfo Perez<br><small>Bass/Guitars</small>
-                            </button>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-3">
-                            <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#bandMember2">
-                                Robert Ruelas<br><small>Vocals/Guitars</small>
-                            </button>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-3">
-                            <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#bandMember3">
-                                Fernando Cruz<br><small>Drums/Vocals</small>
-                            </button>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-3">
-                            <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#bandMember4">
-                                Nathaniel Garcia<br><small>Guitars/Synths</small>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+          <div class="rumors-layout">
+            <div class="rumors-image reveal">
+              <img src="images/hero-band.jpg" alt="And Venus band photo" />
             </div>
-        </div>
-    </section>
 
-    <!-- Band Member Modals -->
-    <!-- Member 1 -->
-    <div class="modal fade" id="bandMember1" tabindex="-1" aria-labelledby="bandMember1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title" id="bandMember1Label">Adolfo Pérez - Bass/Guitars</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="assets/images/dofo_aces.jpg" alt="Adolfo Pérez" class="img-fluid rounded mb-3">
-                    <h5>Bio</h5>
-                    <p>Adolfo Pérez is a talented bass player known for his deep grooves and dynamic playing style. 
-                    With a strong foundation in rhythm and melody, he brings a powerful and steady presence to And Venus, 
-                    blending intricate bass lines with a raw, energetic performance. His influences range from classic rock to modern alternative, 
-                    giving the band's sound a rich and versatile depth. Whether locking in with the drums or adding melodic runs, 
-                    Adolfo's bass work is a driving force behind the band's unique sound.</p>
-                </div>
+            <div class="rumors-copy reveal">
+              <p class="eyebrow">Rumors</p>
+              <h2>There are several versions of the beginning.</h2>
+
+              <p>
+                The most common one places And Venus in Austin, Texas, in the
+                early 2000s. The band was formed by a group of friends who
+                shared an interest in experimental music and the occult. They
+                began performing together in small venues around the city,
+                quickly gaining a following for their unique sound and enigmatic
+                presence.
+              </p>
+
+              <p>
+                And Venus hails from The Rio Grande Valley, a region known for
+                its rich cultural heritage and vibrant music scene. The band
+                draws inspiration from the diverse sounds and traditions of the
+                area, blending them with their own experimental style to create
+                something truly unique.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <!-- Member 2 -->
-    <div class="modal fade" id="bandMember2" tabindex="-1" aria-labelledby="bandMember2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title" id="bandMember2Label">Robert Ruelas - Vocals/Guitars</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="assets/images/bob_SOR_studio2.jpg" alt="Robert Ruelas" class="img-fluid rounded mb-3">
-                    <h5>Bio</h5>
-                    <p>Robert Ruelas is the driving force behind And Venus, delivering powerful vocals and dynamic guitar work that shape the band's signature sound. 
-                        With a blend of raw emotion and technical precision, he crafts melodies that resonate deeply with listeners. His ability to seamlessly transition 
-                        between hauntingly atmospheric tones and high-energy rock riffs gives And Venus a unique edge. Drawing inspiration from a wide range of influences, 
-                        Robert's passionate performances and introspective lyrics bring a compelling depth to the band's music, captivating audiences with every note.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Member 3 -->
-    <div class="modal fade" id="bandMember3" tabindex="-1" aria-labelledby="bandMember3Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title" id="bandMember3Label">Fernando Cruz - Drums/Vocals</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="assets/images/fer_SOR_studio2.jpg" alt="Fernando Cruz" class="img-fluid rounded mb-3">
-                    <h5>Bio</h5>
-                    <p>Fernando Cruz is the rhythmic backbone of And Venus, delivering powerful, precise, and energetic drumming that drives the band's sound forward. 
-                        With a dynamic playing style that blends hard-hitting grooves and intricate fills, he creates a solid foundation that keeps the music both tight and expressive. 
-                        His ability to shift between explosive intensity and subtle rhythmic textures adds depth and emotion to every performance. Whether locking in with the bass or pushing the energy to new heights, 
-                        Fernando's drumming is a force that keeps the audience moving.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-    <!-- Member 4 -->
-    <div class="modal fade" id="bandMember4" tabindex="-1" aria-labelledby="bandMember4Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title" id="bandMember4Label">Nathaniel Garcia - Guitars/Synths</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="assets/images/nate_SOR_studio.jpg" alt="Nathaniel Garcia" class="img-fluid rounded mb-3">
-                    <h5>Bio</h5>
-                    <p>Nathaniel Garcia is the sonic architect of And Venus, weaving atmospheric guitar textures, lush synth layers, and immersive soundscapes into the band's dynamic sound. 
-                        His ability to blend melodic leads, ambient tones, and experimental effects creates a rich, cinematic feel that transports listeners to another dimension. Whether adding ethereal synth harmonies or crafting soaring guitar melodies, 
-                        Nathaniel brings a depth and complexity that elevates the band's music. His innovative approach to sound design makes every performance an electrifying and emotional experience.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>    
-
-    <!-- Shows Section -->
-    <section class="content-section" id="shows" data-aos="fade-up">
+      <!-- THE CIRCLE -->
+      <section class="section dark-panel">
         <div class="container">
-            <h2 class="text-center mb-4">Shows</h2>
-            <div class="text-center">
-                <a href="https://www.songkick.com/artists/6802439" class="songkick-widget btn btn-primary" 
-                   data-theme="dark" 
-                   data-track-button="on" 
-                   data-detect-style="off" 
-                   data-background-color="rgb(0,0,0,1)" 
-                   data-font-color="rgb(255,255,255,1)" 
-                   data-button-bg-color="rgb(255,255,255,1)" 
-                   data-button-text-color="rgb(0,0,0,1)" 
-                   data-locale="en" 
-                   data-other-artists="on" 
-                   data-share-button="on" 
-                   data-country-filter="on" 
-                   data-rsvp="on" 
-                   data-request-show="on" 
-                   data-past-events="off" 
-                   data-past-events-offtour="off" 
-                   data-remind-me="off">
-                    View Tour Dates
+          <div class="section-heading reveal">
+            <p class="eyebrow">The Circle</p>
+            <h2>Members</h2>
+            <p>And Venus is...</p>
+          </div>
+
+          <div class="member-grid">
+            <article class="member-card reveal">
+              <img src="images/band-1.jpg" alt="Robert Ruelas" />
+              <div>
+                <h3>Robert Ruelas</h3>
+                <p>Voice / Wire / Flame</p>
+              </div>
+            </article>
+
+            <article class="member-card reveal">
+              <img src="images/band-2.jpg" alt="Adolfo Pérez" />
+              <div>
+                <h3>Adolfo Pérez</h3>
+                <p>Low Signal / Gravity</p>
+              </div>
+            </article>
+
+            <article class="member-card reveal">
+              <img src="images/band-3.jpg" alt="Fernando Cruz" />
+              <div>
+                <h3>Fernando Cruz</h3>
+                <p>Pulse / Impact / Time</p>
+              </div>
+            </article>
+
+            <article class="member-card reveal">
+              <img src="images/band-4.jpg" alt="Nathaniel Garcia" />
+              <div>
+                <h3>Nathaniel Garcia</h3>
+                <p>Static / Glass / Atmosphere</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RITUALS / SHOWS -->
+      <section class="section" id="rituals">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Rituals</p>
+            <h2>Upcoming Shows</h2>
+            <p>Public appearances are rare, but documented.</p>
+          </div>
+
+          <div class="ritual-list reveal">
+            <article class="ritual-item">
+              <div>
+                <p class="ritual-date">TBA</p>
+                <h3>No Date Has Been Marked</h3>
+                <p>The next appearance has not surfaced. Watch for the sign.</p>
+              </div>
+
+              <a href="#contact" class="btn btn-secondary">Book And Venus</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISIONS / GALLERY -->
+      <section class="section dark-panel" id="visions">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Visions</p>
+            <h2>Photo Archive</h2>
+            <p>Sound and light.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-1.jpg"
+            >
+              <img src="images/gallery-1.jpg" alt="And Venus live photo 1" />
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-2.jpg"
+            >
+              <img src="images/gallery-2.jpg" alt="And Venus live photo 2" />
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-3.jpg"
+            >
+              <img src="images/gallery-3.jpg" alt="And Venus live photo 3" />
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-4.jpg"
+            >
+              <img src="images/gallery-4.jpg" alt="And Venus live photo 4" />
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-5.jpg"
+            >
+              <img src="images/gallery-5.jpg" alt="And Venus live photo 5" />
+            </button>
+
+            <button
+              class="gallery-item reveal"
+              data-image="images/gallery-6.jpg"
+            >
+              <img src="images/gallery-6.jpg" alt="And Venus live photo 6" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELICS / MERCH -->
+      <section class="section" id="relics">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Relics</p>
+            <h2>Merch</h2>
+            <p>
+              Objects left behind. Some can be worn. Some should not be named.
+            </p>
+          </div>
+
+          <div class="merch-grid">
+            <article class="merch-card reveal">
+              <img src="images/merch-1.jpg" alt="Vision Quest shirt" />
+              <div>
+                <h3>Vision Quest Tee</h3>
+                <p>Recovered in black. Marked by the image.</p>
+                <a href="#" class="text-link" target="_blank" rel="noopener">
+                  View Item
                 </a>
-                <script src='//widget-app.songkick.com/injector/6802439' async></script>
-            </div>
-        </div>
-    </section>   
+              </div>
+            </article>
 
-    <!-- Photos Section -->
-    <section class="content-section" id="photos" data-aos="fade-up">
-        <div class="container">
-            <h2 class="text-center mb-4">Photos</h2>
-            <div class="position-relative">
-                <button class="scroll-arrow left" onclick="scrollPhotos('left')" aria-label="Scroll left">
-                    &#10094;
-                </button>
-                
-                <div class="photos-container" id="photoScroll">
-                    <div class="photo-container">
-                        <img src="assets/images/nate_aces.jpg" alt="Photo 1" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/dofo_aces.jpg" alt="Photo 2" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/fer_aces.jpg" alt="Photo 3" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_aces.jpg" alt="Photo 4" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/nate_aces_solo.jpg" alt="Photo 5" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/nate_papa.jpg" alt="Photo 6" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/fer_papa.jpg" alt="Photo 7" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_maracas.jpg" alt="Photo 8" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_scream_maracas.jpg" alt="Photo 9" class="photos" loading="lazy">
-                    </div>    
-                    <div class="photo-container">
-                        <img src="assets/images/dofo_papa.jpg" alt="Photo 10" class="photos" loading="lazy">
-                    </div> 
-                    <div class="photo-container">
-                        <img src="assets/images/bob_walrus.jpg" alt="Photo 11" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/nate_walrus.jpg" alt="Photo 12" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_walrus2.jpg" alt="Photo 13" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/fer_SOR_studio.jpg" alt="Photo 14" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/fer_SOR_studio2.jpg" alt="Photo 15" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/nate_SOR_studio.jpg" alt="Photo 16" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/nate_SOR_drums.jpg" alt="Photo 17" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/dofo_SOR_studio.jpg" alt="Photo 18" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/dofo_bass_closeup.jpg" alt="Photo 19" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_SOR_studio2.jpg" alt="Photo 20" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_guitar_studio.jpg" alt="Photo 21" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/av_jitters.jpg" alt="Photo 22" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/console_SOR_studio.jpg" alt="Photo 23" class="photos" loading="lazy">
-                    </div>
-                    <div class="photo-container">
-                        <img src="assets/images/bob_fer_dofo_rose.jpg" alt="Photo 24" class="photos" loading="lazy">
-                    </div> 
-                </div>
-                
-                <button class="scroll-arrow right" onclick="scrollPhotos('right')" aria-label="Scroll right">
-                    &#10095;
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Modal -->
-    <div id="photoModal" class="modal fade" tabindex="-1" aria-hidden="true" aria-labelledby="photoModalLabel">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content bg-transparent border-0">
-                <div class="modal-body p-0">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <img id="enlargedPhoto" src="" alt="Enlarged Photo" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Merch Section -->
-    <section class="content-section" id="merch" data-aos="fade-up">
-        <div class="container">
-            <h2 class="text-center mb-4">Merchandise</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="product-card card h-100 bg-dark text-white">
-                        <a href="https://andvenus.bigcartel.com/product/vision-quest" target="_blank" aria-label="Vision Quest T-shirt">
-                            <img src="assets/images/andvenus_shirt1.jpeg" alt="Vision Quest T-shirt" class="card-img-top product-image">
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Vision Quest T-shirt</h5>
-                            <p class="card-text">$30.00</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-card card h-100 bg-dark text-white">
-                        <a href="https://andvenus.bigcartel.com/product/logo" target="_blank" aria-label="Incidents Album Logo">
-                            <img src="assets/images/and_venus_shirt_logo.jpeg" alt="And Venus Logo" class="card-img-top product-image">
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Incidents Album Logo</h5>
-                            <p class="card-text">$30.00</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-6">
-                    <div class="product-card card h-100 bg-dark text-white">
-                        <a href="https://andvenus.bigcartel.com/product/belowtheclouds" target="_blank" aria-label="Above The Clouds">
-                            <img src="assets/images/And Venus- Above the Clouds Shirt.webp" alt="Above The Clouds" class="card-img-top product-image">
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Above The Clouds</h5>
-                            <p class="card-text">$30.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="https://andvenus.bigcartel.com" target="_blank" class="btn btn-primary btn-lg">View Store</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="content-section" id="contact" data-aos="fade-up">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h4 class="mb-4">Thank you for visiting! We'd love to hear from you soon!<br>
-                        Please reach out via Calendly or 
-                        <a href="mailto:andvenus@gmail.com" class="text-white">via Email</a>.
-                    </h4>
-                    
-                    <!-- Calendly inline widget -->
-                    <div class="calendly-inline-widget" 
-                         data-url="https://calendly.com/andvenus/30min" 
-                         style="min-width:320px;height:700px;margin: 2rem auto;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer bg-black text-white text-center py-4">
-        <div class="container">
-            <div class="social-icons mb-3">
-                <p class="mb-2">Follow us on:</p>
-                <a href="https://www.facebook.com/andvenus/" 
-                   class="text-primary mx-2" 
-                   target="_blank" 
-                   aria-label="Facebook">
-                    <i class="fab fa-facebook-square fa-2x"></i>
+            <article class="merch-card reveal">
+              <img src="images/merch-2.jpg" alt="Incidents album logo shirt" />
+              <div>
+                <h3>Incidents Logo Tee</h3>
+                <p>The symbol was there before the incident.</p>
+                <a href="#" class="text-link" target="_blank" rel="noopener">
+                  View Item
                 </a>
-                <a href="https://x.com/andvenus" 
-                   class="text-info mx-2" 
-                   target="_blank" 
-                   aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </a>            
-                <a href="https://www.instagram.com/andvenus/" 
-                   class="text-danger mx-2" 
-                   target="_blank" 
-                   aria-label="Instagram">
-                    <i class="fab fa-instagram fa-2x"></i>
+              </div>
+            </article>
+
+            <article class="merch-card reveal">
+              <img src="images/merch-3.jpg" alt="Above the Clouds shirt" />
+              <div>
+                <h3>Above The Clouds</h3>
+                <p>For those who looked up and saw too much.</p>
+                <a href="#" class="text-link" target="_blank" rel="noopener">
+                  View Item
                 </a>
-                <a href="https://www.tiktok.com/@and.venus" 
-                   class="text-dark mx-2" 
-                   target="_blank" 
-                   aria-label="TikTok">
-                    <i class="fab fa-tiktok fa-2x"></i>
-                </a>
-                <a href="https://www.youtube.com/@and-venus" 
-                   class="text-danger mx-2" 
-                   target="_blank" 
-                   aria-label="YouTube">
-                    <i class="fab fa-youtube fa-2x"></i>
-                </a>            
-            </div>
-            
-            <div class="mb-2">
-                <a href="terms.html" class="text-white">Terms of Use</a>
-                <span class="mx-2 text-white">|</span>
-                <a href="privacy.html" class="text-white">Privacy Policy</a>
-            </div>
-          
-            <div>© 2026 And Venus</div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact-section" id="contact">
+        <div class="container narrow reveal">
+          <p class="eyebrow">Open A Channel</p>
+
+          <h2>Open the channel carefully.</h2>
+
+          <p>
+            For appearances, inquiries, recordings, or other forms of contact,
+            leave a message where it can be found.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:booking@andvenus.com" class="btn btn-primary">
+              Email The Band
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.youtube.com/"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              YouTube
+            </a>
+
+            <a
+              href="https://www.tiktok.com/"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              TikTok
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> And Venus. All rights reserved.</p>
+      <p>The signal continues after the room goes quiet.</p>
     </footer>
 
-    <!-- Linking Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    
-    <!-- Linking Custom JavaScript -->
+    <div class="lightbox" id="lightbox">
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+      <img src="" alt="Expanded gallery image" id="lightboxImage" />
+    </div>
+
     <script src="script.js"></script>
-    
-    <script>
-        // Initialize AOS after DOM loads
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    duration: 800,
-                    easing: 'ease-in-out',
-                    once: true
-                });
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>
