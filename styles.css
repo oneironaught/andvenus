@@ -580,33 +580,39 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .album-art {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: block;
+  width: 100%;
+  max-width: 320px;
   aspect-ratio: 1;
+  overflow: hidden;
   border: 1px solid var(--border);
-  background:
-    radial-gradient(circle, rgba(122, 17, 17, 0.32), transparent 45%),
-    radial-gradient(
-      circle at 30% 25%,
-      rgba(201, 164, 92, 0.2),
-      transparent 18%
-    ),
-    #070507;
+  background-color: #070507;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
-.album-art::before {
+.album-art:hover {
+  transform: scale(1.03);
+  filter: contrast(1.08);
+}
+
+.album-art::after {
   content: "";
   position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(201, 164, 92, 0.18);
-  border-radius: 50%;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, transparent 45%, rgba(0, 0, 0, 0.35)),
+    linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
 }
 
-.album-symbol {
-  font-family: var(--heading-font);
-  font-size: 6rem;
-  color: var(--venus-gold);
-  text-shadow: 0 0 36px rgba(201, 164, 92, 0.35);
+.incidents-album {
+  background-image: url("assets/images/incidents-album.jpg");
 }
 
 .music-links {
@@ -616,34 +622,67 @@ body.nav-open .nav-toggle span:nth-child(3) {
   margin-top: 24px;
 }
 
-.music-links a {
-  padding: 9px 13px;
+.icon-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.music-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(201, 164, 92, 0.24);
   border-radius: 999px;
-  color: rgba(232, 221, 200, 0.78);
-  font-family: var(--accent-font);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 1.45rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.music-links a:hover {
-  color: var(--bone);
-  border-color: rgba(201, 164, 92, 0.58);
+.music-icon:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(201, 164, 92, 0.65);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.embed-card {
-  padding: 32px;
+.spotify-icon {
+  color: #1db954;
 }
 
-.fake-embed {
-  display: grid;
-  place-items: center;
-  min-height: 210px;
-  margin-top: 24px;
-  border: 1px dashed rgba(201, 164, 92, 0.34);
-  background: rgba(0, 0, 0, 0.28);
-  color: rgba(232, 221, 200, 0.44);
+.apple-icon {
+  color: #ffffff;
+}
+
+.youtube-icon {
+  color: #ff0000;
+}
+
+.bandcamp-icon {
+  color: #1da0c3;
+}
+
+.spotify-icon:hover {
+  box-shadow: 0 0 24px rgba(29, 185, 84, 0.35);
+}
+
+.apple-icon:hover {
+  box-shadow: 0 0 24px rgba(250, 36, 60, 0.35);
+}
+
+.youtube-icon:hover {
+  box-shadow: 0 0 24px rgba(255, 0, 0, 0.35);
+}
+
+.bandcamp-icon:hover {
+  box-shadow: 0 0 24px rgba(29, 160, 195, 0.35);
 }
 
 /* Rumors */
