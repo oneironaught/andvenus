@@ -1007,6 +1007,13 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	padding: 32px;
 }
 
+.ritual-actions {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
 /* Gallery */
 
 .gallery-grid {
@@ -1234,8 +1241,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	}
 
 	.hero-actions,
-	.contact-actions {
+	.contact-actions,
+	.ritual-actions {
 		flex-direction: column;
+		width: 100%;
 	}
 
 	.btn {
