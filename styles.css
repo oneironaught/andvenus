@@ -371,7 +371,8 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	min-height: 48px;
 	align-items: center;
 	justify-content: center;
-	padding: 0 22px;
+	gap: 12px;
+	padding: 0 24px;
 	border-radius: 999px;
 	font-family: var(--accent-font);
 	font-size: 0.78rem;
@@ -381,11 +382,25 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	transition:
 		transform 0.25s ease,
 		border-color 0.25s ease,
-		background 0.25s ease;
+		background 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.btn i {
+	font-size: 1.05rem;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.25s ease;
 }
 
 .btn:hover {
 	transform: translateY(-3px);
+}
+
+.btn:hover i {
+	transform: scale(1.15);
 }
 
 .btn-primary {
@@ -404,6 +419,54 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .btn-secondary:hover {
 	border-color: rgba(201, 164, 92, 0.6);
 	background: rgba(255, 255, 255, 0.08);
+}
+
+/* Contact Social Icon Colors & Glows */
+.contact-actions .fa-envelope {
+	color: var(--venus-gold);
+}
+
+.contact-actions .fa-instagram {
+	color: #e4405f;
+}
+
+.contact-actions .fa-youtube {
+	color: #ff0000;
+}
+
+.contact-actions .fa-tiktok {
+	color: #25f4ee;
+	filter: drop-shadow(0 0 5px rgba(37, 244, 238, 0.45));
+}
+
+.contact-actions .fa-facebook-f,
+.contact-actions .fa-facebook {
+	color: #1877f2;
+}
+
+.contact-actions a[href*="mailto"]:hover {
+	border-color: rgba(201, 164, 92, 0.7);
+	box-shadow: 0 0 24px rgba(201, 164, 92, 0.3);
+}
+
+.contact-actions a[href*="instagram"]:hover {
+	border-color: rgba(228, 64, 95, 0.6);
+	box-shadow: 0 0 24px rgba(228, 64, 95, 0.25);
+}
+
+.contact-actions a[href*="youtube"]:hover {
+	border-color: rgba(255, 0, 0, 0.6);
+	box-shadow: 0 0 24px rgba(255, 0, 0, 0.25);
+}
+
+.contact-actions a[href*="tiktok"]:hover {
+	border-color: rgba(37, 244, 238, 0.6);
+	box-shadow: 0 0 24px rgba(37, 244, 238, 0.25);
+}
+
+.contact-actions a[href*="facebook"]:hover {
+	border-color: rgba(24, 119, 242, 0.6);
+	box-shadow: 0 0 24px rgba(24, 119, 242, 0.25);
 }
 
 .scroll-indicator {
@@ -537,9 +600,8 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .news-card {
 	position: relative;
 	overflow: hidden;
-	display: grid;
-	grid-template-rows: auto 320px;
-	min-height: 620px;
+	display: flex;
+	flex-direction: column;
 	border: 1px solid var(--border);
 	background:
 		linear-gradient(
@@ -580,6 +642,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 auto;
 	padding: 30px;
 }
 
@@ -605,11 +668,35 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	color: rgba(232, 221, 200, 0.72);
 }
 
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: auto;
+	padding-top: 20px;
+	color: var(--venus-gold);
+	font-family: var(--accent-font);
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.text-link:hover {
+	color: var(--bone);
+	transform: translateX(4px);
+}
+
 /* Uniform media area */
 .news-media {
 	position: relative;
 	z-index: 1;
+	margin-top: auto;
 	padding: 0 30px 30px;
+	height: 320px;
+	box-sizing: border-box;
 }
 
 .news-media img,
@@ -619,7 +706,9 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	border: 1px solid rgba(201, 164, 92, 0.22);
 	background: #050505;
 	object-fit: cover;
+	object-position: center;
 	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+	display: block;
 }
 
 .news-media img {
@@ -719,13 +808,17 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 	.news-card {
 		min-height: auto;
-		grid-template-rows: auto 300px;
+	}
+
+	.news-media {
+		height: 300px;
 	}
 }
 
 @media (max-width: 620px) {
-	.news-card {
-		grid-template-rows: auto 260px;
+	.news-media {
+		height: 250px;
+		padding: 0 24px 24px;
 	}
 
 	.news-content {
