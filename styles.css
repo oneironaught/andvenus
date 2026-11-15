@@ -672,8 +672,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	margin-top: auto;
-	padding-top: 20px;
+	margin-top: 18px;
 	color: var(--venus-gold);
 	font-family: var(--accent-font);
 	font-size: 0.76rem;
@@ -687,6 +686,15 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .text-link:hover {
 	color: var(--bone);
 	transform: translateX(4px);
+}
+
+.news-content .btn {
+	margin-top: 18px;
+	align-self: flex-start;
+}
+
+.news-content .btn i {
+	color: var(--venus-gold);
 }
 
 /* Uniform media area */
